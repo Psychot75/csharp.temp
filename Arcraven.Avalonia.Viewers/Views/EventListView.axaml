@@ -1,0 +1,398 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:models="clr-namespace:Arcraven.Avalonia.ResourcesLib.Models;assembly=Arcraven.Avalonia.ResourcesLib"
+             xmlns:views="clr-namespace:Arcraven.Avalonia.Viewers.Views"
+             xmlns:viewModels="clr-namespace:Arcraven.Avalonia.Viewers.ViewModels"
+             xmlns:converters="clr-namespace:Arcraven.Avalonia.Viewers.Converters"
+             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+             x:DataType="viewModels:EventListViewModel"
+             x:Class="Arcraven.Avalonia.Viewers.Views.EventListView">
+
+    <UserControl.Resources>
+        <converters:SeverityToIconConverter x:Key="SeverityConverter" />
+
+
+        <DataTemplate x:Key="SmallCardTemplate" DataType="models:Event">
+            <Border Classes="arc-card-base arc-card-small">
+                <Grid ColumnDefinitions="Auto, Auto, *, Auto">
+                    <Border Grid.Column="0" Width="3" VerticalAlignment="Stretch"
+                            Background="{Binding Severity, Converter={StaticResource SeverityConverter}, ConverterParameter=Brush}"
+                            Margin="0,0,8,0" />
+                    <Path Grid.Column="1"
+                          Data="{Binding Severity, Converter={StaticResource SeverityConverter}, ConverterParameter=Geometry}"
+                          Fill="{Binding Severity, Converter={StaticResource SeverityConverter}, ConverterParameter=Brush}"
+                          Width="14" Height="14" Stretch="Uniform" Margin="0,0,8,0" />
+                    <StackPanel Grid.Column="2" Orientation="Horizontal" VerticalAlignment="Center">
+                        <TextBlock Text="{Binding Name}" Classes="arc-primary" FontSize="12" FontWeight="SemiBold"
+                                   VerticalAlignment="Center" />
+                    </StackPanel>
+                    <Button Grid.Column="3" Classes="arc-iconbutton" Height="20" Width="20" Margin="4,0,0,0">
+                        <TextBlock Text="⋮" FontSize="10" Margin="0,-6,0,0" />
+                    </Button>
+                </Grid>
+            </Border>
+        </DataTemplate>
+
+
+        <DataTemplate x:Key="MediumCardTemplate" DataType="models:Event">
+            <Border Classes="arc-card-base arc-card-medium" MinHeight="0" Tag="{Binding Severity}">
+                <Grid RowDefinitions="Auto, *, Auto">
+                    <Grid Grid.Row="0" ColumnDefinitions="Auto, *, Auto">
+                        <StackPanel Orientation="Horizontal" Spacing="8">
+                            <Path Data="{Binding Severity, Converter={StaticResource SeverityConverter}}"
+                                  Fill="{Binding Severity, Converter={StaticResource SeverityConverter}}"
+                                  Width="16" Height="16" Stretch="Uniform" VerticalAlignment="Center" />
+                            <TextBlock Text="{Binding Name}" Classes="arc-primary" FontWeight="Light" FontSize="14"
+                                       VerticalAlignment="Center" />
+                        </StackPanel>
+                        <Border Grid.Column="2" Background="{StaticResource Arc.PanelBackgroundBrush}"
+                                BorderBrush="{StaticResource Arc.PanelBorderBrush}" BorderThickness="1"
+                                Padding="6,2" VerticalAlignment="Center">
+                            <TextBlock Text="{Binding SourceGuid, StringFormat='ID: {0}'}" FontSize="10"
+                                       FontFamily="Consolas" Foreground="{StaticResource Arc.MutedTextBrush}"
+                                       MaxWidth="60" />
+                        </Border>
+                    </Grid>
+
+                    <Border Classes="arc-separator" Grid.Row="0" Margin="0,8,0,0" VerticalAlignment="Bottom"
+                            Opacity="0.3" />
+
+                    <ContentControl Grid.Row="1" Content="{Binding}" Margin="0,12">
+                        <ContentControl.DataTemplates>
+                            <DataTemplate DataType="models:GeoSpatialEvent">
+                                <Grid ColumnDefinitions="Auto, Auto, *">
+                                    <StackPanel Grid.Column="0" MinWidth="70">
+                                        <TextBlock Text="{DynamicResource Text.Coordinates}" Classes="arc-caption"
+                                                   FontSize="9" Foreground="{StaticResource Arc.MutedTextBrush}" />
+                                        <TextBlock Text="{Binding Position, StringFormat='{}{0:F2}, {1:F2}'}"
+                                                   Classes="arc-value"
+                                                   Foreground="{StaticResource Arc.PrimaryTextBrush}" FontSize="14" />
+                                        <TextBlock Text="{Binding Position, StringFormat='ALT: {0:F0}m'}"
+                                                   Classes="arc-secondary" FontSize="10" />
+                                    </StackPanel>
+                                    <Border Grid.Column="1" Classes="arc-v-sep" Height="24" VerticalAlignment="Center"
+                                            Margin="12,0" />
+                                    <Grid Grid.Column="2" RowDefinitions="Auto, *">
+                                        <TextBlock Grid.Row="0" Text="{DynamicResource Text.Location}"
+                                                   Classes="arc-caption" FontSize="9"
+                                                   Foreground="{StaticResource Arc.MutedTextBrush}" />
+                                        <TextBlock Grid.Row="1" Text="{Binding Label}" Classes="arc-secondary"
+                                                   FontSize="12" TextWrapping="Wrap" MaxLines="2"
+                                                   TextTrimming="CharacterEllipsis" Margin="0,2,0,0" />
+                                    </Grid>
+                                </Grid>
+                            </DataTemplate>
+
+                            <DataTemplate DataType="models:ContinuousEvent">
+                                <Grid ColumnDefinitions="Auto, Auto, *">
+                                    <StackPanel Grid.Column="0" MinWidth="70">
+                                        <TextBlock Text="{DynamicResource Text.Value}" Classes="arc-caption"
+                                                   FontSize="9" Foreground="{StaticResource Arc.MutedTextBrush}" />
+                                        <TextBlock Text="{Binding Value, StringFormat='{}{0:F1}'}" Classes="arc-value"
+                                                   Foreground="{StaticResource Arc.AccentSecondaryBrush}" FontSize="16" />
+                                    </StackPanel>
+                                    <Border Grid.Column="1" Classes="arc-v-sep" Height="24" VerticalAlignment="Center"
+                                            Margin="12,0" />
+                                    <Grid Grid.Column="2" RowDefinitions="Auto, *">
+                                        <StackPanel Orientation="Horizontal" Spacing="4">
+                                            <TextBlock Text="{DynamicResource Text.Duration}" Classes="arc-caption"
+                                                       FontSize="9" Foreground="{StaticResource Arc.MutedTextBrush}"
+                                                       VerticalAlignment="Center" />
+                                            <TextBlock Text="{Binding Duration, StringFormat='mm\\:ss'}"
+                                                       Classes="arc-secondary" FontSize="10" VerticalAlignment="Center" />
+                                        </StackPanel>
+                                        <ProgressBar Grid.Row="1" Classes="arc-progress" Value="{Binding Value}"
+                                                     Maximum="100" Height="4" Margin="0,4,0,0" />
+                                    </Grid>
+                                </Grid>
+                            </DataTemplate>
+
+                            <DataTemplate DataType="models:RCEvent">
+                                <Grid ColumnDefinitions="Auto, Auto, *">
+                                    <StackPanel Grid.Column="0" MinWidth="70">
+                                        <TextBlock Text="{DynamicResource Text.LinkStatus}" Classes="arc-caption"
+                                                   FontSize="9" Foreground="{StaticResource Arc.MutedTextBrush}" />
+                                        <StackPanel Orientation="Horizontal" Spacing="4">
+                                            <Ellipse Width="6" Height="6" Fill="{StaticResource Arc.StatusOnlineBrush}"
+                                                     VerticalAlignment="Center" />
+                                            <TextBlock Text="{DynamicResource Text.Connected}" Classes="arc-value"
+                                                       Foreground="{StaticResource Arc.StatusOnlineBrush}"
+                                                       FontSize="14" />
+                                        </StackPanel>
+                                        <TextBlock Text="{Binding Position, StringFormat='{}{0:F1}, {1:F1}'}"
+                                                   FontSize="9" Foreground="{StaticResource Arc.MutedTextBrush}"
+                                                   Margin="0,2,0,0" />
+                                    </StackPanel>
+
+                                    <Border Grid.Column="1" Classes="arc-v-sep" Height="24" VerticalAlignment="Center"
+                                            Margin="12,0" />
+
+                                    <Grid Grid.Column="2" ColumnDefinitions="*, Auto">
+                                        <ItemsControl ItemsSource="{Binding Sensors}" HorizontalAlignment="Left">
+                                            <ItemsControl.ItemsPanel>
+                                                <ItemsPanelTemplate>
+                                                    <StackPanel Orientation="Horizontal" Spacing="8" />
+                                                </ItemsPanelTemplate>
+                                            </ItemsControl.ItemsPanel>
+                                            <ItemsControl.ItemTemplate>
+                                                <DataTemplate>
+                                                    <Border Background="#11FFFFFF" Padding="4,2">
+                                                        <StackPanel Orientation="Horizontal" Spacing="4">
+                                                            <TextBlock Text="{Binding Name}" FontSize="9"
+                                                                       Foreground="{StaticResource Arc.MutedTextBrush}" />
+                                                            <TextBlock Text="{Binding Value, StringFormat='{}{0:F1}'}"
+                                                                       FontSize="9"
+                                                                       Foreground="{StaticResource Arc.PrimaryTextBrush}"
+                                                                       FontWeight="Bold" />
+                                                        </StackPanel>
+                                                    </Border>
+                                                </DataTemplate>
+                                            </ItemsControl.ItemTemplate>
+                                        </ItemsControl>
+
+                                        <TextBlock Grid.Column="1" Text="{DynamicResource Text.ManualOverrideActive}"
+                                                   Classes="arc-label"
+                                                   Foreground="{StaticResource Arc.AccentPrimaryBrush}"
+                                                   VerticalAlignment="Center" IsVisible="{Binding !IsControllable}"
+                                                   FontSize="10" Margin="8,0,0,0" />
+                                    </Grid>
+                                </Grid>
+                            </DataTemplate>
+                        </ContentControl.DataTemplates>
+                    </ContentControl>
+
+                    <Grid Grid.Row="2" ColumnDefinitions="*, Auto" RowDefinitions="Auto, *"
+                          IsVisible="{Binding $parent[ListBoxItem].IsSelected}">
+                        <Border Grid.Row="0" Grid.ColumnSpan="2" Height="1" Margin="-12,0,-12,12" />
+                        <ComboBox Grid.Row="1" Grid.Column="0" Classes="arc-combobox-chip" HorizontalAlignment="Left"
+                                  ItemsSource="{Binding $parent[UserControl].((viewModels:EventListViewModel)DataContext).SeverityOptions}"
+                                  SelectedItem="{Binding Severity}"
+                                  PlaceholderText="{DynamicResource Text.SelectState}" />
+
+                        <StackPanel Grid.Row="1" Grid.Column="1" Orientation="Horizontal">
+                            <Button IsVisible="{Binding !IsAcknowledged}" Classes="arc-primary"
+                                    Content="{DynamicResource Text.Acknowledge}" FontSize="11" Padding="12,4"
+                                    Command="{Binding $parent[UserControl].((viewModels:EventListViewModel)DataContext).AcknowledgeCommand}"
+                                    CommandParameter="{Binding .}" />
+                            <TextBlock IsVisible="{Binding IsAcknowledged}" Text="{DynamicResource Text.Acknowledge}"
+                                       Foreground="{StaticResource Arc.StatusOnlineBrush}" FontSize="10"
+                                       VerticalAlignment="Center" FontWeight="SemiBold" Margin="0,0,4,0" />
+                        </StackPanel>
+                    </Grid>
+                </Grid>
+            </Border>
+        </DataTemplate>
+
+        <DataTemplate x:Key="LargeCardTemplate" DataType="models:Event">
+            <Border Classes="arc-card-base arc-card-large" Grid.IsSharedSizeScope="True">
+                <Grid RowDefinitions="Auto, *, Auto">
+                    
+                    <Grid Grid.Row="0" ColumnDefinitions="Auto, *, Auto" Margin="0,0,0,12">
+                        <StackPanel Orientation="Horizontal" VerticalAlignment="Center" Spacing="10">
+                            <Border Width="4" Height="18" Background="{StaticResource Arc.AccentPrimaryBrush}"/>
+                            <StackPanel Spacing="2">
+                                <TextBlock Text="{Binding Name}" FontFamily="Segoe UI" FontWeight="Bold" FontSize="16"
+                                           Foreground="{StaticResource Arc.AccentPrimaryBrush}" />
+                                <StackPanel Orientation="Horizontal" Spacing="6">
+                                   
+                                    <TextBlock Text="{Binding Id, StringFormat='ID: {0}'}" FontSize="10"
+                                               Foreground="#66FFFFFF" VerticalAlignment="Center" />
+                                </StackPanel>
+                            </StackPanel>
+                        </StackPanel>
+
+                        <StackPanel Grid.Column="2" HorizontalAlignment="Right">
+                            <TextBlock Text="{Binding StartingTime, StringFormat='HH:mm:ss'}"
+                                       FontFamily="Consolas" FontSize="16"
+                                       Foreground="{StaticResource Arc.MutedTextBrush}" HorizontalAlignment="Right" />
+                            <TextBlock Text="UTC SYNCHRONIZED" FontSize="8" Foreground="#44FFFFFF"
+                                       HorizontalAlignment="Right" LetterSpacing="1" />
+                        </StackPanel>
+                    </Grid>
+
+                    <ContentControl Grid.Row="1" Content="{Binding}">
+                        <ContentControl.DataTemplates>
+
+                            <DataTemplate DataType="models:GeoSpatialEvent">
+                                <Grid><TextBlock Text="Map View Placeholder" Foreground="Gray"/></Grid>
+                            </DataTemplate>
+                    
+                            <DataTemplate DataType="models:ContinuousEvent">
+                                <Grid><TextBlock Text="Continuous Data Placeholder" Foreground="Gray"/></Grid>
+                            </DataTemplate>
+                            
+                            <DataTemplate DataType="models:RCEvent">
+                                <Grid ColumnDefinitions="3*, 8, 5*">
+
+                                    <Border Grid.Column="0" Background="#11FFFFFF" Padding="12">
+                                        <Grid RowDefinitions="Auto, *">
+                                            <TextBlock Text="SYSTEM TELEMETRY" Classes="arc-caption" Opacity="0.5"
+                                                       Margin="0,0,0,12" />
+
+                                            <ScrollViewer Grid.Row="1" VerticalScrollBarVisibility="Auto"
+                                                          Padding="0,0,12,0">
+                                                <StackPanel Spacing="16">
+
+                                                    <StackPanel Spacing="4">
+                                                        <TextBlock Text="SENSOR ARRAY" FontSize="10"
+                                                                   Foreground="{StaticResource Arc.AccentSecondaryBrush}"
+                                                                   FontWeight="SemiBold" />
+                                                        <ItemsControl ItemsSource="{Binding Sensors}">
+                                                            <ItemsControl.ItemTemplate>
+                                                                <DataTemplate>
+                                                                    <Grid Margin="0,2">
+                                                                        <Grid.ColumnDefinitions>
+                                                                            <ColumnDefinition Width="Auto"
+                                                                                SharedSizeGroup="NameCol" />
+                                                                            <ColumnDefinition Width="*" />
+                                                                            <ColumnDefinition Width="Auto"
+                                                                                SharedSizeGroup="ValCol" />
+                                                                            <ColumnDefinition Width="30" />
+                                                                        </Grid.ColumnDefinitions>
+                                                                        <TextBlock Text="{Binding Name}"
+                                                                            Foreground="#AAFFFFFF" FontSize="11" />
+                                                                        <Rectangle Grid.Column="1" Height="1"
+                                                                            Stroke="#22FFFFFF" StrokeDashArray="2,2"
+                                                                            StrokeThickness="1"
+                                                                            VerticalAlignment="Center" Margin="4,0" />
+                                                                        <TextBlock Grid.Column="2"
+                                                                            Text="{Binding Value, StringFormat='{}{0:0.00}'}"
+                                                                            Foreground="White" FontFamily="Consolas"
+                                                                            FontSize="11" />
+                                                                        <TextBlock Grid.Column="3"
+                                                                            Text="{Binding Unit}"
+                                                                            Foreground="#66FFFFFF" FontSize="9"
+                                                                            Margin="4,0,0,0" VerticalAlignment="Bottom" />
+                                                                    </Grid>
+                                                                </DataTemplate>
+                                                            </ItemsControl.ItemTemplate>
+                                                        </ItemsControl>
+                                                    </StackPanel>
+
+                                                    <Separator Background="#22FFFFFF" Height="1" />
+
+                                                    <StackPanel Spacing="4">
+                                                        <TextBlock Text="ARTICULATION / JOINTS" FontSize="10"
+                                                                   Foreground="{StaticResource Arc.AccentSecondaryBrush}"
+                                                                   FontWeight="SemiBold" />
+                                                        <ItemsControl ItemsSource="{Binding Joints}">
+                                                            <ItemsControl.ItemTemplate>
+                                                                <DataTemplate>
+                                                                    <Grid Margin="0,2">
+                                                                        <Grid.ColumnDefinitions>
+                                                                            <ColumnDefinition Width="Auto"
+                                                                                SharedSizeGroup="NameCol" />
+                                                                            <ColumnDefinition Width="*" />
+                                                                            <ColumnDefinition Width="Auto"
+                                                                                SharedSizeGroup="ValCol" />
+                                                                            <ColumnDefinition Width="30" />
+                                                                        </Grid.ColumnDefinitions>
+                                                                        <TextBlock Text="{Binding Name}"
+                                                                            Foreground="#AAFFFFFF" FontSize="11" />
+                                                                        <Rectangle Grid.Column="1" Height="1"
+                                                                            Stroke="#22FFFFFF" StrokeDashArray="2,2"
+                                                                            StrokeThickness="1"
+                                                                            VerticalAlignment="Center" Margin="4,0" />
+                                                                        <TextBlock Grid.Column="2"
+                                                                            Text="{Binding Position, StringFormat='{}{0:0.00}'}"
+                                                                            Foreground="{StaticResource Arc.AccentSecondaryBrush}"
+                                                                            FontFamily="Consolas" FontSize="11" />
+                                                                        <TextBlock Grid.Column="3" Text="rad"
+                                                                            Foreground="#66FFFFFF" FontSize="9"
+                                                                            Margin="4,0,0,0" VerticalAlignment="Bottom" />
+                                                                    </Grid>
+                                                                </DataTemplate>
+                                                            </ItemsControl.ItemTemplate>
+                                                        </ItemsControl>
+                                                    </StackPanel>
+
+                                                </StackPanel>
+                                            </ScrollViewer>
+                                        </Grid>
+                                    </Border>
+
+                                    <Grid Grid.Column="2" RowDefinitions="Auto, *">
+                                        <Grid ColumnDefinitions="*, Auto" Margin="0,0,0,8">
+                                            <TextBlock Text="LIVE OPTICAL FEED" Classes="arc-caption" Opacity="0.5"
+                                                       VerticalAlignment="Center" />
+                                        </Grid>
+
+                                        <Border Grid.Row="1" Background="Black" ClipToBounds="True">
+                                            <ItemsControl ItemsSource="{Binding Cameras}">
+                                                <ItemsControl.ItemsPanel>
+                                                    <ItemsPanelTemplate>
+                                                        <UniformGrid Columns="2" Rows="2" />
+                                                    </ItemsPanelTemplate>
+                                                </ItemsControl.ItemsPanel>
+                                                <ItemsControl.ItemTemplate>
+                                                    <DataTemplate>
+                                                        
+                                                    </DataTemplate>
+                                                </ItemsControl.ItemTemplate>
+                                            </ItemsControl>
+                                        </Border>
+                                    </Grid>
+                                </Grid>
+                            </DataTemplate>
+
+                        </ContentControl.DataTemplates>
+                    </ContentControl>
+
+                    <Grid Grid.Row="2" ColumnDefinitions="*, Auto" Margin="0,12,0,0">
+                        <StackPanel Orientation="Horizontal" Spacing="16" VerticalAlignment="Center">
+                            <Button Classes="arc-ghost" Content="{DynamicResource Text.Dismiss}" FontSize="12"
+                                    Padding="10,5" />
+                            <Button Classes="arc-ghost" Content="VIEW LOGS" FontSize="12" Padding="10,5" />
+                        </StackPanel>
+
+                        <Button Grid.Column="1" Classes="arc-primary"
+                                Content="{DynamicResource Text.Acknowledge}"
+                                Command="{Binding $parent[UserControl].((viewModels:EventListViewModel)DataContext).AcknowledgeCommand}"
+                                CommandParameter="{Binding .}" />
+                    </Grid>
+                </Grid>
+            </Border>
+        </DataTemplate>
+
+        <converters:WidthToTemplateConverter x:Key="ResponsiveCardConverter"
+                                             SmallTemplate="{StaticResource SmallCardTemplate}"
+                                             MediumTemplate="{StaticResource MediumCardTemplate}"
+                                             LargeTemplate="{StaticResource LargeCardTemplate}" />
+    </UserControl.Resources>
+
+    <Border Classes="arc-sidepanel" Padding="0">
+        <Grid RowDefinitions="Auto, Auto, *">
+            <StackPanel Grid.Row="0" Orientation="Horizontal" Margin="12,12,12,0">
+                <TextBlock Text="{DynamicResource Text.Tracks}" FontWeight="Bold"
+                           Foreground="{StaticResource Arc.PrimaryTextBrush}" Margin="0,0,16,0" />
+                <TextBlock Text="★" HorizontalAlignment="Right" Classes="arc-secondary" Margin="110,0,0,0" />
+            </StackPanel>
+
+            <Border Grid.Row="1" Margin="8" BorderBrush="{StaticResource Arc.PanelBorderBrush}" BorderThickness="1"
+                    Background="{StaticResource Arc.InputBackgroundBrush}">
+                <Grid ColumnDefinitions="Auto, *, Auto">
+                    <TextBlock Grid.Column="0" Text="🔍" Margin="8,0" VerticalAlignment="Center"
+                               Foreground="{StaticResource Arc.SecondaryTextBrush}" />
+                    <TextBox Grid.Column="1" Classes="arc-input" BorderThickness="0"
+                             Watermark="{DynamicResource Text.SearchTracks}" Background="Transparent" />
+                </Grid>
+            </Border>
+
+            <ListBox Grid.Row="2" ItemsSource="{Binding SystemEvents}" SelectedItem="{Binding SelectedEvent}"
+                     Classes="arc-listbox">
+                <ListBox.ItemTemplate>
+                    <DataTemplate>
+                        <ContentControl Content="{Binding}">
+                            <ContentControl.ContentTemplate>
+                                <Binding Path="$parent[ListBox].Bounds.Width"
+                                         Converter="{StaticResource ResponsiveCardConverter}" />
+                            </ContentControl.ContentTemplate>
+                        </ContentControl>
+                    </DataTemplate>
+                </ListBox.ItemTemplate>
+            </ListBox>
+        </Grid>
+    </Border>
+</UserControl>

@@ -1,0 +1,14 @@
+C:\Users\EH02\Documents\Arcraven.TwinPeek\Arcraven.WebRtc\obj\Debug\net9.0\Arcraven.WebRtc.csproj.AssemblyReference.cache
+C:\Users\EH02\Documents\Arcraven.TwinPeek\Arcraven.WebRtc\obj\Debug\net9.0\Avalonia\Resources.Inputs.cache
+C:\Users\EH02\Documents\Arcraven.TwinPeek\Arcraven.WebRtc\obj\Debug\net9.0\Arcraven.WebRtc.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\EH02\Documents\Arcraven.TwinPeek\Arcraven.WebRtc\obj\Debug\net9.0\Arcraven.WebRtc.AssemblyInfoInputs.cache
+C:\Users\EH02\Documents\Arcraven.TwinPeek\Arcraven.WebRtc\obj\Debug\net9.0\Arcraven.WebRtc.AssemblyInfo.cs
+C:\Users\EH02\Documents\Arcraven.TwinPeek\Arcraven.WebRtc\obj\Debug\net9.0\Arcraven.WebRtc.csproj.CoreCompileInputs.cache
+C:\Users\EH02\Documents\Arcraven.TwinPeek\Arcraven.WebRtc\obj\Debug\net9.0\Arcraven.WebRtc.sourcelink.json
+C:\Users\EH02\Documents\Arcraven.TwinPeek\Arcraven.WebRtc\bin\Debug\net9.0\Arcraven.WebRtc.deps.json
+C:\Users\EH02\Documents\Arcraven.TwinPeek\Arcraven.WebRtc\bin\Debug\net9.0\Arcraven.WebRtc.dll
+C:\Users\EH02\Documents\Arcraven.TwinPeek\Arcraven.WebRtc\bin\Debug\net9.0\Arcraven.WebRtc.pdb
+C:\Users\EH02\Documents\Arcraven.TwinPeek\Arcraven.WebRtc\obj\Debug\net9.0\Arcraven.WebRtc.dll
+C:\Users\EH02\Documents\Arcraven.TwinPeek\Arcraven.WebRtc\obj\Debug\net9.0\refint\Arcraven.WebRtc.dll
+C:\Users\EH02\Documents\Arcraven.TwinPeek\Arcraven.WebRtc\obj\Debug\net9.0\Arcraven.WebRtc.pdb
+C:\Users\EH02\Documents\Arcraven.TwinPeek\Arcraven.WebRtc\obj\Debug\net9.0\ref\Arcraven.WebRtc.dll

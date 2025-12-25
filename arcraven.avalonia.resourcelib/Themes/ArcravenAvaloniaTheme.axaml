@@ -1,0 +1,748 @@
+<Styles xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <!-- =========================
+         RESOURCES (COLORS/BRUSHES)
+         ========================= -->
+    <Styles.Resources>
+  
+        <Color x:Key="SystemAccentColor">#05F3F7</Color>
+        <Color x:Key="SystemAccentColorLight1">#6FC9CB</Color>
+        <Color x:Key="SystemAccentColorLight2">#6FC9CB</Color>
+        <Color x:Key="SystemAccentColorDark1">#04C2C6</Color>
+        <Color x:Key="SystemAccentColorDark2">#04C2C6</Color>
+        
+        
+        <Color x:Key="Arc.BaseBackgroundColor">#0E0F12</Color>
+        <Color x:Key="Arc.PanelBackgroundColor">#15171D</Color>
+        <Color x:Key="Arc.PanelHeaderColor">#101218</Color>
+        <Color x:Key="Arc.PanelBorderColor">#32363F</Color>
+        <Color x:Key="Arc.SeparatorColor">#252932</Color>
+
+        <!-- Text -->
+        <Color x:Key="Arc.PrimaryTextColor">#F5F6FA</Color>
+        <Color x:Key="Arc.SecondaryTextColor">#B0B4C2</Color>
+        <Color x:Key="Arc.MutedTextColor">#7A808C</Color>
+        <Color x:Key="Arc.ErrorTextColor">#FF6B6B</Color>
+
+        <!-- Accents -->
+        <Color x:Key="Arc.AccentPrimaryColor">#FFBA28</Color>
+        <Color x:Key="Arc.AccentPrimaryHoverColor">#FFD266</Color>
+        <Color x:Key="Arc.AccentPrimaryPressedColor">#D9981F</Color>
+        <Color x:Key="Arc.AccentPrimaryMutedColor">#CFA35C</Color>
+
+        <Color x:Key="Arc.AccentSecondaryColor">#05F3F7</Color>
+        <Color x:Key="Arc.AccentSecondaryHoverColor">#5FFFFF</Color>
+        <Color x:Key="Arc.AccentSecondaryPressedColor">#04C2C6</Color>
+        <Color x:Key="Arc.AccentSecondaryMutedColor">#6FC9CB</Color>
+        
+        <Color x:Key="Arc.AccentTertiaryColor">#FFF50E</Color>
+        <Color x:Key="Arc.AccentTertiaryHoverColor">#F7FE80</Color>
+        <Color x:Key="Arc.AccentTertiaryPressedColor">#F6F640</Color>
+        <Color x:Key="Arc.AccentTertiaryMutedColor">#DED70B</Color>
+
+        <Color x:Key="Arc.AccentErrorColor">#DC4F4C</Color>
+        <Color x:Key="Arc.AccentErrorHoverColor">#120909</Color>
+        <Color x:Key="Arc.AccentErrorPressedColor">#B63F3D</Color>
+        <Color x:Key="Arc.AccentErrorMutedColor">#290F0F</Color>
+
+        <!-- Status -->
+        <Color x:Key="Arc.StatusOnlineColor">#FF3FCF5E</Color>
+        <Color x:Key="Arc.MutedStatusOnlineColor">#FF0F1A12</Color>
+
+        <Color x:Key="Arc.StatusSimulatedColor">#FF00C853</Color>
+        <Color x:Key="Arc.MutedStatusSimulatedColor">#FF0D1E12</Color>
+
+        <Color x:Key="Arc.StatusWarningColor">#FFFFA726</Color>
+        <Color x:Key="Arc.MutedStatusWarningColor">#FF2A1F0E</Color>
+
+        <Color x:Key="Arc.StatusErrorColor">#FFDC4F4C</Color>
+        <Color x:Key="Arc.MutedStatusErrorColor">#FF261313</Color>
+
+        <!-- Map background -->
+        <Color x:Key="Arc.MapBackgroundColor">#FF000000</Color>
+
+        <!-- Extras -->
+        <Color x:Key="Arc.SelectionColor">#3326C6FF</Color>
+        <Color x:Key="Arc.OverlaySoftColor">#66000000</Color>
+        <Color x:Key="Arc.GridLineColor">#22262F</Color>
+        <Color x:Key="Arc.InputBackgroundColor">#1B1F28</Color>
+        <Color x:Key="Arc.InputBorderColor">#3A3F4C</Color>
+        <Color x:Key="Arc.InputBorderFocusedColor">#05F3F7</Color>
+
+        <!-- BRUSHES -->
+        <SolidColorBrush x:Key="ThemeAccentBrush"
+                         Color="{StaticResource SystemAccentColor}" />
+        <SolidColorBrush x:Key="ThemeAccentColor"
+                         Color="{StaticResource SystemAccentColor}" />
+        <SolidColorBrush x:Key="ThemeAccentBrushLight1"
+                         Color="{StaticResource SystemAccentColorLight1}" />
+        <SolidColorBrush x:Key="ThemeAccentBrushLight2"
+                         Color="{StaticResource SystemAccentColorLight2}" />
+        <SolidColorBrush x:Key="ThemeAccentBrushDark1"
+                         Color="{StaticResource SystemAccentColorDark1}" />
+        <SolidColorBrush x:Key="ThemeAccentBrushDark2"
+                         Color="{StaticResource SystemAccentColorDark2}" />
+        
+        
+        <SolidColorBrush x:Key="Arc.BaseBackgroundBrush"
+                         Color="{StaticResource Arc.BaseBackgroundColor}" />
+        <SolidColorBrush x:Key="Arc.PanelBackgroundBrush"
+                         Color="{StaticResource Arc.PanelBackgroundColor}" />
+        <SolidColorBrush x:Key="Arc.PanelHeaderBrush"
+                         Color="{StaticResource Arc.PanelHeaderColor}" />
+        <SolidColorBrush x:Key="Arc.PanelBorderBrush"
+                         Color="{StaticResource Arc.PanelBorderColor}" />
+        <SolidColorBrush x:Key="Arc.SeparatorBrush"
+                         Color="{StaticResource Arc.SeparatorColor}" />
+
+        <SolidColorBrush x:Key="Arc.PrimaryTextBrush"
+                         Color="{StaticResource Arc.PrimaryTextColor}" />
+        <SolidColorBrush x:Key="Arc.SecondaryTextBrush"
+                         Color="{StaticResource Arc.SecondaryTextColor}" />
+        <SolidColorBrush x:Key="Arc.MutedTextBrush"
+                         Color="{StaticResource Arc.MutedTextColor}" />
+        <SolidColorBrush x:Key="Arc.ErrorTextBrush"
+                         Color="{StaticResource Arc.ErrorTextColor}" />
+
+        <SolidColorBrush x:Key="Arc.AccentPrimaryBrush"
+                         Color="{StaticResource Arc.AccentPrimaryColor}" />
+        <SolidColorBrush x:Key="Arc.AccentPrimaryHoverBrush"
+                         Color="{StaticResource Arc.AccentPrimaryHoverColor}" />
+        <SolidColorBrush x:Key="Arc.AccentPrimaryPressedBrush"
+                         Color="{StaticResource Arc.AccentPrimaryPressedColor}" />
+        <SolidColorBrush x:Key="Arc.AccentPrimaryMutedBrush"
+                         Color="{StaticResource Arc.AccentPrimaryMutedColor}" />
+        
+        <SolidColorBrush x:Key="Arc.AccentSecondaryBrush"
+                         Color="{StaticResource Arc.AccentSecondaryColor}" />
+        <SolidColorBrush x:Key="Arc.AccentSecondaryHoverBrush"
+                         Color="{StaticResource Arc.AccentSecondaryHoverColor}" />
+        <SolidColorBrush x:Key="Arc.AccentSecondaryPressedBrush"
+                         Color="{StaticResource Arc.AccentSecondaryPressedColor}" />
+        <SolidColorBrush x:Key="Arc.AccentSecondaryMutedBrush"
+                         Color="{StaticResource Arc.AccentSecondaryMutedColor}" />
+        
+        <SolidColorBrush x:Key="Arc.AccentTertiaryBrush"
+                         Color="{StaticResource Arc.AccentTertiaryColor}" />
+        <SolidColorBrush x:Key="Arc.AccentTertiaryHoverBrush"
+                         Color="{StaticResource Arc.AccentTertiaryHoverColor}" />
+        <SolidColorBrush x:Key="Arc.AccentTertiaryPressedBrush"
+                         Color="{StaticResource Arc.AccentTertiaryPressedColor}" />
+        <SolidColorBrush x:Key="Arc.AccentTertiaryMutedBrush"
+                         Color="{StaticResource Arc.AccentTertiaryMutedColor}" />
+
+        <SolidColorBrush x:Key="Arc.AccentErrorBrush"
+                         Color="{StaticResource Arc.AccentErrorColor}" />
+        <SolidColorBrush x:Key="Arc.AccentErrorHoverBrush"
+                         Color="{StaticResource Arc.AccentErrorHoverColor}" />
+        <SolidColorBrush x:Key="Arc.AccentErrorPressedBrush"
+                         Color="{StaticResource Arc.AccentErrorPressedColor}" />
+        <SolidColorBrush x:Key="Arc.AccentErrorMutedBrush"
+                         Color="{StaticResource Arc.AccentErrorMutedColor}" />
+
+        <SolidColorBrush x:Key="Arc.StatusOnlineBrush"
+                         Color="{StaticResource Arc.StatusOnlineColor}" />
+        <SolidColorBrush x:Key="Arc.MutedStatusOnlineBrush"
+                         Color="{StaticResource Arc.MutedStatusOnlineColor}" />
+
+        <SolidColorBrush x:Key="Arc.StatusSimulatedBrush"
+                         Color="{StaticResource Arc.StatusSimulatedColor}" />
+        <SolidColorBrush x:Key="Arc.MutedStatusSimulatedBrush"
+                         Color="{StaticResource Arc.MutedStatusSimulatedColor}" />
+
+        <SolidColorBrush x:Key="Arc.StatusWarningBrush"
+                         Color="{StaticResource Arc.StatusWarningColor}" />
+        <SolidColorBrush x:Key="Arc.MutedStatusWarningBrush"
+                         Color="{StaticResource Arc.MutedStatusWarningColor}" />
+
+        <SolidColorBrush x:Key="Arc.StatusErrorBrush"
+                         Color="{StaticResource Arc.StatusErrorColor}" />
+        <SolidColorBrush x:Key="Arc.MutedStatusErrorBrush"
+                         Color="{StaticResource Arc.MutedStatusErrorColor}" />
+
+        <SolidColorBrush x:Key="Arc.MapBackgroundBrush"
+                         Color="{StaticResource Arc.MapBackgroundColor}" />
+
+        <SolidColorBrush x:Key="Arc.SelectionBrush"
+                         Color="{StaticResource Arc.SelectionColor}" />
+        <SolidColorBrush x:Key="Arc.OverlaySoftBrush"
+                         Color="{StaticResource Arc.OverlaySoftColor}" />
+        <SolidColorBrush x:Key="Arc.GridLineBrush"
+                         Color="{StaticResource Arc.GridLineColor}" />
+        <SolidColorBrush x:Key="Arc.InputBackgroundBrush"
+                         Color="{StaticResource Arc.InputBackgroundColor}" />
+        <SolidColorBrush x:Key="Arc.InputBorderBrush"
+                         Color="{StaticResource Arc.InputBorderColor}" />
+        <SolidColorBrush x:Key="Arc.InputBorderFocusedBrush"
+                         Color="{StaticResource Arc.InputBorderFocusedColor}" />
+
+        <SolidColorBrush x:Key="Arc.TransparentBrush" Color="#00FFFFFF" />
+    </Styles.Resources>
+    
+    <!-- =========================
+         WINDOW / ROOT
+         ========================= -->
+
+    <!-- Apply with Classes="arc-shellwindow" on your Window -->
+    <Style Selector="Window.arc-shellwindow">
+        <Setter Property="Background" Value="{StaticResource Arc.BaseBackgroundBrush}" />
+        <Setter Property="Foreground" Value="{StaticResource Arc.PrimaryTextBrush}" />
+    </Style>
+    
+    <!-- =========================
+         TYPOGRAPHY (use Classes)
+         ========================= -->
+
+    <Style Selector="TextBlock.arc-primary">
+        <Setter Property="Foreground" Value="{StaticResource Arc.PrimaryTextBrush}" />
+        <Setter Property="FontFamily" Value="Segoe UI" />
+        <Setter Property="FontSize" Value="13" />
+    </Style>
+
+    <Style Selector="TextBlock.arc-secondary">
+        <Setter Property="Foreground" Value="{StaticResource Arc.SecondaryTextBrush}" />
+        <Setter Property="FontFamily" Value="Segoe UI" />
+        <Setter Property="FontSize" Value="12" />
+    </Style>
+
+    <Style Selector="TextBlock.arc-sectionheader">
+        <Setter Property="Foreground" Value="{StaticResource Arc.SecondaryTextBrush}" />
+        <Setter Property="FontFamily" Value="Segoe UI Semibold" />
+        <Setter Property="FontSize" Value="14" />
+        <Setter Property="TextWrapping" Value="NoWrap" />
+        <Setter Property="TextTrimming" Value="CharacterEllipsis" />
+    </Style>
+
+    <Style Selector="TextBlock.arc-label">
+        <Setter Property="Foreground" Value="{StaticResource Arc.SecondaryTextBrush}" />
+        <Setter Property="FontFamily" Value="Segoe UI" />
+        <Setter Property="FontSize" Value="11" />
+        <Setter Property="FontWeight" Value="SemiBold" />
+        <Setter Property="TextWrapping" Value="NoWrap" />
+        <Setter Property="TextTrimming" Value="CharacterEllipsis" />
+    </Style>
+
+    <Style Selector="TextBlock.arc-value">
+        <Setter Property="Foreground" Value="{StaticResource Arc.SecondaryTextBrush}" />
+        <Setter Property="FontFamily" Value="Segoe UI" />
+        <Setter Property="FontSize" Value="18" />
+        <Setter Property="FontWeight" Value="SemiBold" />
+    </Style>
+
+    <!-- =========================
+         PANELS / LAYOUT
+         ========================= -->
+
+    <!-- Side panel: Classes="arc-sidepanel" -->
+    <Style Selector="Border.arc-sidepanel">
+        <Setter Property="Background" Value="{StaticResource Arc.PanelBackgroundBrush}" />
+        <Setter Property="BorderBrush" Value="{StaticResource Arc.PanelBorderBrush}" />
+        <Setter Property="BorderThickness" Value="0,0,1,0" />
+        <Setter Property="Padding" Value="12" />
+    </Style>
+
+    <!-- Panel header: Classes="arc-panelheader" -->
+    <Style Selector="Border.arc-panelheader">
+        <Setter Property="Background" Value="{StaticResource Arc.PanelHeaderBrush}" />
+        <Setter Property="BorderBrush" Value="{StaticResource Arc.PanelBorderBrush}" />
+        <Setter Property="BorderThickness" Value="0,0,0,1" />
+        <Setter Property="Padding" Value="8,6" />
+    </Style>
+
+    <!-- Card: Classes="arc-card" -->
+    <Style Selector="Border.arc-card-base">
+        <Setter Property="Background" Value="#0DFFFFFF" /> <Setter Property="BorderBrush" Value="{StaticResource Arc.PanelBorderBrush}" />
+        <Setter Property="BorderThickness" Value="1" />
+        <Setter Property="BoxShadow" Value="0 4 10 0 #40000000" /> <Setter Property="Margin" Value="0,0,0,8" />
+    </Style>
+
+    <Style Selector="Border.arc-card-base:pointerover">
+        <Setter Property="BorderBrush" Value="{StaticResource Arc.AccentPrimaryBrush}" />
+        <Setter Property="Background" Value="#1AFFFFFF" />
+    </Style>
+
+    <Style Selector="Border.arc-card-small">
+        <Setter Property="Padding" Value="8,4" />
+        <Setter Property="Height" Value="48" />
+    </Style>
+
+    <Style Selector="Border.arc-card-medium">
+        <Setter Property="Padding" Value="12" />
+        <Setter Property="MinHeight" Value="110" />
+    </Style>
+
+    <Style Selector="Border.arc-card-large">
+        <Setter Property="Padding" Value="16" />
+        <Setter Property="MinHeight" Value="200" />
+        <Setter Property="Background" Value="#15171D" />
+        <Setter Property="BorderBrush" Value="{StaticResource Arc.AccentPrimaryMutedBrush}" />
+    </Style>
+    
+    <Style Selector="ListBoxItem:selected Border.arc-card-base">
+        <Setter Property="BorderThickness" Value="2" />
+        <Setter Property="BorderBrush" Value="{StaticResource Arc.AccentPrimaryBrush}" />
+    </Style>
+    
+
+    <Style Selector="Border.arc-v-sep">
+        <Setter Property="Width" Value="1" />
+        <Setter Property="Margin" Value="8,2" />
+        <Setter Property="Background" Value="{StaticResource Arc.PanelBorderBrush}" />
+    </Style>
+
+    <!-- Map surface: Classes="arc-mapsurface" on a Grid -->
+    <Style Selector="Grid.arc-mapsurface">
+        <Setter Property="Background" Value="{StaticResource Arc.MapBackgroundBrush}" />
+    </Style>
+
+    <!-- Separator: Classes="arc-separator" -->
+    <Style Selector="Separator.arc-separator">
+        <Setter Property="Margin" Value="0,4,0,4" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="Separator">
+                    <Border Height="1"
+                            Background="{StaticResource Arc.SeparatorBrush}" />
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+        <!-- =========================
+         BUTTONS
+         ========================= -->
+
+    <!-- Primary button: Classes="arc-primary" -->
+    <Style Selector="Button.arc-primary">
+        <Setter Property="Foreground" Value="{StaticResource Arc.BaseBackgroundBrush}" />
+        <Setter Property="Background" Value="{StaticResource Arc.AccentPrimaryBrush}" />
+        <Setter Property="Padding" Value="14,6" />
+        <Setter Property="CornerRadius" Value="0" />
+        <Setter Property="FontSize" Value="13" />
+        <Setter Property="FontWeight" Value="SemiBold" />
+        <Setter Property="BorderThickness" Value="0" />
+        <Setter Property="HorizontalContentAlignment" Value="Center" />
+        <Setter Property="VerticalContentAlignment" Value="Center" />
+        <Setter Property="Cursor" Value="Hand" />
+    </Style>
+
+    <!-- Primary – template states -->
+    <Style Selector="Button.arc-primary /template/ ContentPresenter#PART_ContentPresenter">
+        <Setter Property="Background" Value="{StaticResource Arc.AccentPrimaryBrush}" />
+    </Style>
+
+    <Style Selector="Button.arc-primary:pointerover /template/ ContentPresenter#PART_ContentPresenter">
+        <Setter Property="Foreground" Value="{StaticResource Arc.BaseBackgroundBrush}" />
+        <Setter Property="Background" Value="{StaticResource Arc.AccentPrimaryHoverBrush}" />
+    </Style>
+
+    <Style Selector="Button.arc-primary:pressed /template/ ContentPresenter#PART_ContentPresenter">
+        <Setter Property="Foreground" Value="{StaticResource Arc.BaseBackgroundBrush}" />
+        <Setter Property="Background" Value="{StaticResource Arc.AccentPrimaryPressedBrush}" />
+    </Style>
+
+    <Style Selector="Button.arc-primary:disabled /template/ ContentPresenter#PART_ContentPresenter">
+        <Setter Property="Opacity" Value="0.35" />
+    </Style>
+
+
+    <!-- Secondary button: Classes="arc-secondary" -->
+    <Style Selector="Button.arc-secondary">
+        <Setter Property="Foreground" Value="{StaticResource Arc.BaseBackgroundBrush}" />
+        <Setter Property="Background" Value="{StaticResource Arc.AccentSecondaryBrush}" />
+        <Setter Property="BorderBrush" Value="{StaticResource Arc.AccentSecondaryBrush}" />
+        <Setter Property="HorizontalContentAlignment" Value="Center" />
+        <Setter Property="VerticalContentAlignment" Value="Center" />
+        <Setter Property="CornerRadius" Value="0" />
+        <Setter Property="BorderThickness" Value="1" />
+        <Setter Property="Padding" Value="10,4" />
+        <Setter Property="FontSize" Value="12" />
+        <Setter Property="Cursor" Value="Hand" />
+    </Style>
+
+    <Style Selector="Button.arc-secondary /template/ ContentPresenter#PART_ContentPresenter">
+        <Setter Property="Foreground" Value="{StaticResource Arc.BaseBackgroundBrush}" />
+        <Setter Property="Background" Value="{StaticResource Arc.AccentSecondaryBrush}" />
+        <Setter Property="BorderBrush" Value="{StaticResource Arc.AccentSecondaryBrush}" />
+    </Style>
+
+    <Style Selector="Button.arc-secondary:pointerover /template/ ContentPresenter#PART_ContentPresenter">
+        <Setter Property="Foreground" Value="{StaticResource Arc.BaseBackgroundBrush}" />
+        <Setter Property="Background" Value="{StaticResource Arc.AccentSecondaryMutedBrush}" />
+    </Style>
+
+    <Style Selector="Button.arc-secondary:pressed /template/ ContentPresenter#PART_ContentPresenter">
+        <Setter Property="Foreground" Value="{StaticResource Arc.BaseBackgroundBrush}" />
+        <Setter Property="Background" Value="{StaticResource Arc.AccentSecondaryPressedBrush}" />
+    </Style>
+
+    <Style Selector="Button.arc-secondary:disabled /template/ ContentPresenter#PART_ContentPresenter">
+        <Setter Property="Opacity" Value="0.35" />
+    </Style>
+    
+    <!-- Tertiary button: Classes="arc-tertiary" -->
+    <Style Selector="Button.arc-tertiary">
+        <Setter Property="Foreground" Value="{StaticResource Arc.BaseBackgroundBrush}" />
+        <Setter Property="Background" Value="{StaticResource Arc.AccentTertiaryBrush}" />
+        <Setter Property="BorderBrush" Value="{StaticResource Arc.AccentTertiaryBrush}" />
+        <Setter Property="HorizontalContentAlignment" Value="Center" />
+        <Setter Property="VerticalContentAlignment" Value="Center" />
+        <Setter Property="FontWeight" Value="SemiBold" />
+        <Setter Property="CornerRadius" Value="0" />
+        <Setter Property="BorderThickness" Value="1" />
+        <Setter Property="Padding" Value="10,4" />
+        <Setter Property="FontSize" Value="12" />
+        <Setter Property="Cursor" Value="Hand" />
+    </Style>
+
+    <Style Selector="Button.arc-tertiary /template/ ContentPresenter#PART_ContentPresenter">
+        <Setter Property="Foreground" Value="{StaticResource Arc.BaseBackgroundBrush}" />
+        <Setter Property="Background" Value="{StaticResource Arc.AccentTertiaryBrush}" />
+        <Setter Property="BorderBrush" Value="{StaticResource Arc.AccentTertiaryBrush}" />
+    </Style>
+
+    <Style Selector="Button.arc-tertiary:pointerover /template/ ContentPresenter#PART_ContentPresenter">
+        <Setter Property="Foreground" Value="{StaticResource Arc.BaseBackgroundBrush}" />
+        <Setter Property="Background" Value="{StaticResource Arc.AccentTertiaryMutedBrush}" />
+    </Style>
+
+    <Style Selector="Button.arc-tertiary:pressed /template/ ContentPresenter#PART_ContentPresenter">
+        <Setter Property="Foreground" Value="{StaticResource Arc.BaseBackgroundBrush}" />
+        <Setter Property="Background" Value="{StaticResource Arc.AccentTertiaryPressedBrush}" />
+    </Style>
+
+    <Style Selector="Button.arc-tertiary:disabled /template/ ContentPresenter#PART_ContentPresenter">
+        <Setter Property="Opacity" Value="0.35" />
+    </Style>
+
+
+    <!-- Ghost button: Classes="arc-ghost" -->
+    <Style Selector="Button.arc-ghost">
+        <Setter Property="Foreground" Value="{StaticResource Arc.SecondaryTextBrush}" />
+        <Setter Property="Background" Value="{StaticResource Arc.PanelHeaderBrush}" />
+        <Setter Property="BorderBrush" Value="{StaticResource Arc.PanelBorderBrush}" />
+        <Setter Property="HorizontalContentAlignment" Value="Center" />
+        <Setter Property="VerticalContentAlignment" Value="Center" />
+        <Setter Property="BorderThickness" Value="1" />
+        <Setter Property="Padding" Value="8,4" />
+        <Setter Property="FontSize" Value="12" />
+        <Setter Property="Cursor" Value="Hand" />
+    </Style>
+
+    <Style Selector="Button.arc-ghost /template/ ContentPresenter#PART_ContentPresenter">
+        <Setter Property="Background" Value="{StaticResource Arc.PanelHeaderBrush}" />
+        <Setter Property="BorderBrush" Value="{StaticResource Arc.PanelBorderBrush}" />
+    </Style>
+
+    <Style Selector="Button.arc-ghost:pointerover /template/ ContentPresenter#PART_ContentPresenter">
+        <Setter Property="Background" Value="{StaticResource Arc.PanelHeaderBrush}" />
+    </Style>
+
+    <Style Selector="Button.arc-ghost:pressed /template/ ContentPresenter#PART_ContentPresenter">
+        <Setter Property="Background" Value="{StaticResource Arc.PanelBackgroundBrush}" />
+    </Style>
+
+
+    <!-- Error / destructive button: Classes="arc-error" -->
+    <Style Selector="Button.arc-error">
+        <Setter Property="Foreground" Value="{StaticResource Arc.AccentErrorBrush}" />
+        <Setter Property="Background" Value="{StaticResource Arc.AccentErrorMutedBrush}" />
+        <Setter Property="BorderBrush" Value="{StaticResource Arc.AccentErrorBrush}" />
+        <Setter Property="HorizontalContentAlignment" Value="Center" />
+        <Setter Property="VerticalContentAlignment" Value="Center" />
+        <Setter Property="CornerRadius" Value="0" />
+        <Setter Property="Padding" Value="10,4" />
+        <Setter Property="FontSize" Value="12" />
+        <Setter Property="BorderThickness" Value="1" />
+        <Setter Property="Cursor" Value="Hand" />
+    </Style>
+
+    <Style Selector="Button.arc-error /template/ ContentPresenter#PART_ContentPresenter">
+        <Setter Property="Background" Value="{StaticResource Arc.AccentErrorMutedBrush}" />
+        <Setter Property="BorderBrush" Value="{StaticResource Arc.AccentErrorBrush}" />
+    </Style>
+
+    <Style Selector="Button.arc-error:pointerover /template/ ContentPresenter#PART_ContentPresenter">
+        <Setter Property="Foreground" Value="{StaticResource Arc.AccentErrorBrush}" />
+        <Setter Property="Background" Value="{StaticResource Arc.AccentErrorHoverBrush}" />
+        <Setter Property="BorderBrush" Value="{StaticResource Arc.AccentErrorBrush}" />
+    </Style>
+
+    <Style Selector="Button.arc-error:pressed /template/ ContentPresenter#PART_ContentPresenter">
+        <Setter Property="Background" Value="{StaticResource Arc.AccentErrorPressedBrush}" />
+        <Setter Property="BorderBrush" Value="{StaticResource Arc.AccentErrorBrush}" />
+    </Style>
+
+    <Style Selector="Button.arc-error:disabled /template/ ContentPresenter#PART_ContentPresenter">
+        <Setter Property="Opacity" Value="0.35" />
+    </Style>
+
+    <!-- Ghost / panel button: Classes="arc-ghost" -->
+    <Style Selector="Button.arc-ghost">
+        <Setter Property="Foreground" Value="{StaticResource Arc.SecondaryTextBrush}" />
+        <Setter Property="Background" Value="{StaticResource Arc.PanelHeaderBrush}" />
+        <Setter Property="BorderBrush" Value="{StaticResource Arc.PanelBorderBrush}" />
+        <Setter Property="HorizontalContentAlignment" Value="Center" />
+        <Setter Property="VerticalContentAlignment" Value="Center" />
+        <Setter Property="CornerRadius" Value="0" />
+        <Setter Property="BorderThickness" Value="1" />
+        <Setter Property="Padding" Value="8,4" />
+        <Setter Property="FontSize" Value="12" />
+        <Setter Property="Cursor" Value="Hand" />
+    </Style>
+
+    <Style Selector="Button.arc-ghost:pointerover">
+        <Setter Property="Background" Value="#FF20252E" />
+        <Setter Property="Foreground" Value="{StaticResource Arc.PrimaryTextBrush}" />
+    </Style>
+
+    <Style Selector="Button.arc-ghost:pressed">
+        <Setter Property="Background" Value="#FF171B23" />
+    </Style>
+
+    <Style Selector="Button.arc-ghost:disabled">
+        <Setter Property="Opacity" Value="0.3" />
+    </Style>
+
+    <!-- Icon button: Classes="arc-iconbutton" -->
+    <Style Selector="Button.arc-iconbutton">
+        <Setter Property="Padding" Value="4" />
+        <Setter Property="Width" Value="26" />
+        <Setter Property="Height" Value="26" />
+        <Setter Property="Background" Value="{StaticResource Arc.PanelHeaderBrush}" />
+        <Setter Property="BorderBrush" Value="{StaticResource Arc.PanelBorderBrush}" />
+        <Setter Property="BorderThickness" Value="1" />
+        <Setter Property="Cursor" Value="Hand" />
+    </Style>
+
+    <Style Selector="Button.arc-iconbutton:pointerover">
+        <Setter Property="Background" Value="#FF20252E" />
+        <Setter Property="Foreground" Value="{StaticResource Arc.PrimaryTextBrush}" />
+    </Style>
+
+    <Style Selector="Button.arc-iconbutton:pressed">
+        <Setter Property="Background" Value="#FF171B23" />
+    </Style>
+
+    <!-- Nav toggle: Classes="arc-navtoggle" -->
+    <Style Selector="ToggleButton.arc-navtoggle /template/ ContentPresenter#PART_ContentPresenter">
+        <Setter Property="Foreground" Value="{StaticResource Arc.BaseBackgroundColor}" />
+        <Setter Property="BorderBrush" Value="{StaticResource Arc.PanelBorderBrush}" />
+        <Setter Property="BorderThickness" Value="0" />
+        <Setter Property="CornerRadius" Value="0" />
+        <Setter Property="Padding" Value="8,4" />
+        <Setter Property="HorizontalContentAlignment" Value="Left" />
+        <Setter Property="Cursor" Value="Hand" />
+    </Style>
+
+    <Style Selector="ToggleButton.arc-navtoggle:pointerover /template/ ContentPresenter#PART_ContentPresenter">
+    </Style>
+
+    <Style Selector="ToggleButton.arc-navtoggle:checked /template/ ContentPresenter#PART_ContentPresenter">
+    </Style>
+
+    <Style Selector="ToggleButton.arc-navtoggle:disabled /template/ ContentPresenter#PART_ContentPresenter">
+    </Style>
+
+    <!-- =========================
+         LIST / GRID
+         ========================= -->
+
+    <!-- ListBox: Classes="arc-listbox" -->
+    <Style Selector="ListBox.arc-listbox">
+        <Setter Property="Background" Value="Transparent" />
+        <Setter Property="BorderThickness" Value="0" />
+        <Setter Property="Foreground" Value="{StaticResource Arc.PrimaryTextBrush}" />
+    </Style>
+
+    <!-- ListBoxItem: Classes="arc-listboxitem" -->
+    <Style Selector="ListBox.arc-listbox > ListBoxItem">
+        <Setter Property="Padding" Value="8,6" />
+        <Setter Property="HorizontalContentAlignment" Value="Stretch" />
+        <Setter Property="Background" Value="Transparent" />
+        <Setter Property="BorderThickness" Value="0" />
+        <Setter Property="Foreground" Value="{StaticResource Arc.SecondaryTextBrush}" />
+    </Style>
+
+    <Style Selector="ListBox.arc-listbox > ListBoxItem:pointerover /template/ ContentPresenter#PART_ContentPresenter">
+        <Setter Property="Background" Value="#FF1E242E" />
+        <Setter Property="Foreground" Value="{StaticResource Arc.PrimaryTextBrush}" />
+    </Style>
+
+    <Style Selector="ListBox.arc-listbox > ListBoxItem:selected /template/ ContentPresenter#PART_ContentPresenter">
+        <Setter Property="Background" Value="Transparent" /> 
+        <Setter Property="Foreground" Value="{StaticResource Arc.PrimaryTextBrush}" />
+    </Style>
+
+    <Style Selector="ListBox.arc-listbox > ListBoxItem:disabled /template/ ContentPresenter#PART_ContentPresenter">
+        <Setter Property="Opacity" Value="0.3" />
+    </Style>
+
+    <!-- =========================
+         INPUTS (TEXTBOX / COMBOBOX)
+         ========================= -->
+
+    <!-- TextBox: Classes="arc-input" -->
+    <Style Selector="TextBox.arc-input">
+        <Setter Property="Foreground" Value="{StaticResource Arc.SecondaryTextBrush}" />
+        <Setter Property="Background" Value="{StaticResource Arc.InputBackgroundBrush}" />
+        <Setter Property="BorderBrush" Value="{StaticResource Arc.InputBorderBrush}" />
+        <Setter Property="CornerRadius" Value="0" />
+        <Setter Property="BorderThickness" Value="1" />
+        <Setter Property="Padding" Value="6,4" />
+        <Setter Property="FontSize" Value="12" />
+    </Style>
+
+    <Style Selector="TextBox.arc-input:focus">
+        <Setter Property="BorderBrush" Value="{StaticResource Arc.InputBorderFocusedBrush}" />
+    </Style>
+
+    <Style Selector="TextBox.arc-input:disabled">
+        <Setter Property="Opacity" Value="0.35" />
+    </Style>
+
+    <!-- ComboBox: Classes="arc-combobox"
+         (keeps default template, just colors) -->
+    <Style Selector="ComboBox.arc-combobox">
+        <Setter Property="Foreground" Value="{StaticResource Arc.SecondaryTextBrush}" />
+        <Setter Property="Background" Value="{StaticResource Arc.InputBackgroundBrush}" />
+        <Setter Property="BorderBrush" Value="{StaticResource Arc.InputBorderBrush}" />
+        <Setter Property="BorderThickness" Value="1" />
+        <Setter Property="CornerRadius" Value="0" />
+        <Setter Property="Padding" Value="4,2" />
+        <Setter Property="FontSize" Value="12" />
+        <Setter Property="Height" Value="26" />
+        <Setter Property="HorizontalContentAlignment" Value="Left" />
+    </Style>
+
+    <Style Selector="ComboBox.arc-combobox:pointerover, ComboBox.arc-combobox:focus">
+        <Setter Property="BorderBrush" Value="{StaticResource Arc.InputBorderFocusedBrush}" />
+    </Style>
+
+    <Style Selector="ComboBox.arc-combobox:disabled">
+        <Setter Property="Opacity" Value="0.35" />
+    </Style>
+
+    <!-- =========================
+     SLIDER / PROGRESS
+     ========================= -->
+
+    <!-- Slider: Classes="arc-slider" -->
+    <Style Selector="Slider.arc-slider">
+        <Setter Property="Foreground" Value="{StaticResource Arc.AccentSecondaryBrush}" />
+        <Setter Property="Background" Value="{StaticResource Arc.GridLineBrush}" />
+        <Setter Property="Height" Value="18" />
+    </Style>
+
+    <!-- ProgressBar: Classes="arc-progress" -->
+    <Style Selector="ProgressBar.arc-progress">
+        <Setter Property="Height" Value="4" />
+        <Setter Property="Foreground" Value="{StaticResource Arc.AccentSecondaryBrush}" />
+        <Setter Property="Background" Value="{StaticResource Arc.GridLineBrush}" />
+    </Style>
+
+    <!-- =========================
+         PILL / BADGE / CHIP
+         ========================= -->
+
+    <!-- Base chip: Classes="arc-chip" -->
+    <Style Selector="Border.arc-chip">
+        <Setter Property="CornerRadius" Value="0" />
+        <Setter Property="Padding" Value="6" />
+        <Setter Property="Background" Value="#151A23" />
+        <Setter Property="BorderThickness" Value="1" />
+    </Style>
+
+    <!-- ONLINE badge: Classes="arc-badge-online" -->
+    <Style Selector="Border.arc-badge-online">
+        <Setter Property="CornerRadius" Value="0" />
+        <Setter Property="Padding" Value="6" />
+        <Setter Property="BorderBrush" Value="{StaticResource Arc.StatusOnlineBrush}" />
+        <Setter Property="Background" Value="{StaticResource Arc.MutedStatusOnlineBrush}" />
+        <Setter Property="BorderThickness" Value="1" />
+    </Style>
+
+    <!-- WARNING badge: Classes="arc-badge-warning" -->
+    <Style Selector="Border.arc-badge-warning">
+        <Setter Property="CornerRadius" Value="0" />
+        <Setter Property="Padding" Value="6" />
+        <Setter Property="BorderBrush" Value="{StaticResource Arc.StatusWarningBrush}" />
+        <Setter Property="Background" Value="{StaticResource Arc.MutedStatusWarningBrush}" />
+        <Setter Property="BorderThickness" Value="1" />
+    </Style>
+
+    <!-- ERROR badge: Classes="arc-badge-error" -->
+    <Style Selector="Border.arc-badge-error">
+        <Setter Property="CornerRadius" Value="0" />
+        <Setter Property="Padding" Value="6" />
+        <Setter Property="BorderBrush" Value="{StaticResource Arc.AccentErrorBrush}" />
+        <Setter Property="Background" Value="{StaticResource Arc.AccentErrorMutedBrush}" />
+        <Setter Property="BorderThickness" Value="1" />
+    </Style>
+
+    <Style Selector="ComboBox.arc-combobox-chip">
+        <Setter Property="Background" Value="#252830" />
+        <Setter Property="BorderBrush" Value="#3A3F4C" />
+        <Setter Property="BorderThickness" Value="1" />
+        <Setter Property="CornerRadius" Value="0" />
+        <Setter Property="Padding" Value="8,2" />
+        <Setter Property="Height" Value="24" />
+        <Setter Property="FontSize" Value="11" />
+        <Setter Property="Foreground" Value="{StaticResource Arc.SecondaryTextBrush}" />
+        <Setter Property="VerticalContentAlignment" Value="Center" />
+    </Style>
+
+    <Style Selector="ComboBox.arc-combobox-chip:pointerover">
+        <Setter Property="BorderBrush" Value="{StaticResource Arc.AccentSecondaryBrush}" />
+        <Setter Property="Background" Value="#2E333D" />
+    </Style>
+    
+    <!-- =========================
+         TOGGLE SWITCH (ON/OFF)
+         ========================= -->
+
+    <!-- ToggleButton: Classes="arc-toggle-switch" -->
+    <Style Selector="ToggleButton.arc-toggle-switch">
+        <Setter Property="Width" Value="38" />
+        <Setter Property="Height" Value="18" />
+        <Setter Property="Background" Value="#FF252B37" />
+        <Setter Property="BorderBrush" Value="{StaticResource Arc.PanelBorderBrush}" />
+        <Setter Property="BorderThickness" Value="1" />
+        <Setter Property="Cursor" Value="Hand" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="ToggleButton">
+                    <Border x:Name="Track"
+                            Background="{TemplateBinding Background}"
+                            BorderBrush="{TemplateBinding BorderBrush}"
+                            BorderThickness="{TemplateBinding BorderThickness}">
+                        <Grid>
+                            <Border x:Name="Thumb"
+                                    Width="8"
+                                    Height="12"
+                                    Margin="2"
+                                    HorizontalAlignment="Left"
+                                    Background="{StaticResource Arc.SecondaryTextBrush}" />
+                        </Grid>
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <!-- Checked state for switch -->
+    <Style Selector="ToggleButton.arc-toggle-switch:checked /template/ Border#Track">
+        <Setter Property="Background" Value="{StaticResource Arc.AccentSecondaryBrush}" />
+    </Style>
+
+    <Style Selector="ToggleButton.arc-toggle-switch:checked /template/ Border#Thumb">
+        <Setter Property="HorizontalAlignment" Value="Right" />
+        <Setter Property="Background" Value="{StaticResource Arc.PanelHeaderBrush}" />
+    </Style>
+
+    <Style Selector="ToggleButton.arc-toggle-switch:disabled /template/ Border#Track">
+        <Setter Property="Opacity" Value="0.35" />
+    </Style>
+
+</Styles>

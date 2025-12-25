@@ -1,0 +1,51 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:vm="using:Arcraven.Avalonia.HMI.ViewModels"
+             xmlns:models="using:Arcraven.Avalonia.ResourcesLib.Models"
+             xmlns:converters="clr-namespace:Arcraven.Avalonia.Viewers.Converters;assembly=Arcraven.Avalonia.Viewers"
+             xmlns:views="clr-namespace:Arcraven.Avalonia.Viewers.Views;assembly=Arcraven.Avalonia.Viewers"
+             mc:Ignorable="d" d:DesignWidth="1280" d:DesignHeight="800"
+             x:DataType="vm:GeneralViewModel"
+             x:Class="Arcraven.Avalonia.HMI.Views.GeneralView"
+             Background="{StaticResource Arc.BaseBackgroundBrush}">
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto" MinWidth="0" />
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+
+        <views:EventListView Grid.Column="0" 
+                            DataContext="{Binding EventListVm}"
+                            IsVisible="{Binding IsSidebarVisible}" />
+
+        <GridSplitter Grid.Column="1" ResizeDirection="Columns" 
+                      Background="{StaticResource Arc.BaseBackgroundColor}" Width="2" 
+                      IsVisible="{Binding IsSidebarVisible}" />
+
+        <Grid Grid.Column="2">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+
+            <views:MapSurfaceView Grid.Row="0" DataContext="{Binding MapVm}" />
+
+            <StackPanel Grid.Row="0" Orientation="Horizontal" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="16">
+                <Button Command="{Binding ToggleSidebarCommand}" Classes="arc-iconbutton">
+                    <TextBlock Text="◫" />
+                </Button>
+            </StackPanel>
+
+            <GridSplitter Grid.Row="1" ResizeDirection="Rows" Background="{StaticResource Arc.PanelBorderBrush}" Height="2" />
+
+            <ContentControl Grid.Row="2" Content="{Binding TimelineVm}">
+            </ContentControl>
+            
+        </Grid>
+    </Grid>
+</UserControl>

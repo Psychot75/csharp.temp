@@ -1,0 +1,392 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        x:Class="Arcraven.Avalonia.ResourcesLib.Views.AvaloniaThemeTestWindow"
+        Title="AvaloniaThemeTestWindow">
+    
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="2*" />
+            <ColumnDefinition Width="8*" />
+            <ColumnDefinition Width="2*" />
+        </Grid.ColumnDefinitions>
+
+        <!-- LEFT PANEL -->
+        <Border Grid.Column="0" Classes="arc-sidepanel">
+            <StackPanel>
+
+                <TextBlock Classes="arc-sectionheader"
+                           Text="Left Panel / Navigation"
+                           Margin="0,0,0,4" />
+
+                <!-- Toggle Buttons -->
+                <ToggleButton Classes="arc-navtoggle"
+                              Content="Dashboard" />
+                
+                <ToggleButton Classes="arc-navtoggle"
+                              Content="Tasks"
+                              IsChecked="True" />
+                
+                <ToggleButton Classes="arc-navtoggle"
+                              Content="Assets" />
+                
+                <ToggleButton Classes="arc-navtoggle"
+                              Content="Settings" />
+
+                <Separator Classes="arc-separator" />
+
+                <!-- Search / Filter Card -->
+                <Border Classes="arc-card">
+                    <StackPanel>
+                        <TextBlock Classes="arc-primary"
+                                   Text="Search / Filters" />
+                        <TextBlock Classes="arc-secondary"
+                                   Text="Quick filter on assets and tasks."
+                                   Margin="0,2,0,4" />
+
+                        <TextBox Classes="arc-input"
+                                 Margin="0,0,0,4"
+                                 Text="Search tasks..." />
+
+                        <StackPanel Orientation="Horizontal"
+                                    VerticalAlignment="Center">
+                            <ToggleButton Classes="arc-toggle-switch"
+                                          Margin="0,0,8,0" />
+                            <TextBlock Classes="arc-secondary"
+                                       Text="Show simulated assets only" />
+                        </StackPanel>
+                    </StackPanel>
+                </Border>
+
+                <!-- Status Card -->
+                <Border Classes="arc-card">
+                    <StackPanel>
+                        <!-- Badges / Chips -->
+                        <StackPanel Orientation="Vertical"
+                                    Margin="0,4,0,0">
+                            <Border Classes="arc-badge-online">
+                                <TextBlock Text="ONLINE • 4 assets" FontSize="13" FontWeight="Light"
+                                           Classes="arc-caption"
+                                           Foreground="{StaticResource Arc.StatusOnlineBrush}" />
+                            </Border>
+
+                            <Border Classes="arc-badge-warning">
+                                <TextBlock Text="WARNING • 1 battery low" FontSize="13" FontWeight="Light"
+                                           Classes="arc-caption"
+                                           Foreground="{StaticResource Arc.StatusWarningBrush}" />
+                            </Border>
+
+                            <Border Classes="arc-badge-error">
+                                <TextBlock Text="ERROR • 1 link lost" FontSize="13" FontWeight="Light"
+                                           Classes="arc-caption"
+                                           Foreground="{StaticResource Arc.AccentErrorBrush}" />
+                            </Border>
+                        </StackPanel>
+                    </StackPanel>
+                </Border>
+
+            </StackPanel>
+        </Border>
+
+        <!-- MAP SURFACE (CENTER) -->
+        <Grid Grid.Column="1"
+              Classes="arc-mapsurface">
+
+            <!-- Map title -->
+            <TextBlock Text="Map Surface"
+                       Classes="arc-primary"
+                       HorizontalAlignment="Center"
+                       VerticalAlignment="Center"
+                       FontSize="32"
+                       Foreground="{StaticResource Arc.AccentSecondaryBrush}" />
+
+            <!-- Metrics overlay in top-left -->
+            <Border Classes="arc-card"
+                    HorizontalAlignment="Left"
+                    VerticalAlignment="Top"
+                    Margin="16">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+
+                    <StackPanel Grid.Column="0">
+                        <TextBlock Classes="arc-caption"
+                                   Text="SPEED" />
+                        <TextBlock Classes="arc-primary"
+                                   Text="45 mph" />
+                    </StackPanel>
+
+                    <StackPanel Grid.Column="1">
+                        <TextBlock Classes="arc-caption"
+                                   Text="ALTITUDE" />
+                        <TextBlock Classes="arc-primary"
+                                   Text="35 ft MSL" />
+                    </StackPanel>
+
+                    <StackPanel Grid.Column="2">
+                        <TextBlock Classes="arc-caption"
+                                   Text="HEADING" />
+                        <TextBlock Classes="arc-primary"
+                                   Text="218°" />
+                    </StackPanel>
+                </Grid>
+            </Border>
+
+            <!-- Time scrubber at bottom -->
+            <Border Classes="arc-card"
+                    HorizontalAlignment="Stretch"
+                    VerticalAlignment="Bottom"
+                    Margin="16">
+                <StackPanel>
+                    <StackPanel Orientation="Horizontal"
+                                HorizontalAlignment="Stretch">
+                        <TextBlock Classes="arc-secondary"
+                                   Text="Timeline"
+                                   VerticalAlignment="Center" />
+
+                        <StackPanel Orientation="Horizontal"
+                                    HorizontalAlignment="Right"
+                                    Margin="8,0,0,0">
+                            <Button Classes="arc-iconbutton"
+                                    Margin="4,0,0,0">
+                                <TextBlock Text="⏮" />
+                            </Button>
+                            <Button Classes="arc-iconbutton"
+                                    Margin="4,0,0,0">
+                                <TextBlock Text="▶" />
+                            </Button>
+                            <Button Classes="arc-iconbutton"
+                                    Margin="4,0,0,0">
+                                <TextBlock Text="⏭" />
+                            </Button>
+                        </StackPanel>
+                    </StackPanel>
+
+                    <Slider Classes="arc-slider"
+                            Minimum="0"
+                            Maximum="100"
+                            Value="35"
+                            Margin="0,4,0,0" />
+                </StackPanel>
+            </Border>
+
+        </Grid>
+
+        <!-- RIGHT PANEL -->
+        <Border Grid.Column="2" Classes="arc-sidepanel">
+            <StackPanel>
+
+                <Border Classes="arc-panelheader">
+                    <TextBlock Classes="arc-sectionheader"
+                               Text="Actions / Forms" />
+                </Border>
+
+                <!-- Buttons -->
+                <StackPanel Orientation="Vertical">
+                    <Button Classes="arc-primary"
+                            Content="Primary Action"
+                            Margin="0,4,0,0"
+                            HorizontalAlignment="Stretch" />
+
+                    <Button Classes="arc-secondary"
+                            Content="Secondary Action"
+                            Margin="0,4,0,0"
+                            HorizontalAlignment="Stretch" />
+                    
+                    <Button Classes="arc-tertiary"
+                            Content="Tertiary Action"
+                            Margin="0,4,0,0"
+                            HorizontalAlignment="Stretch" />
+
+                    <Button Classes="arc-ghost"
+                            Content="Ghost Action"
+                            Margin="0,4,0,0"
+                            HorizontalAlignment="Stretch" />
+
+                    <Button Classes="arc-error"
+                            Content="Danger / Abort"
+                            Margin="0,4,0,0"
+                            HorizontalAlignment="Stretch" />
+
+                    <StackPanel Orientation="Horizontal"
+                                Margin="0,4,0,0">
+                        <Button Classes="arc-iconbutton"
+                                Margin="0,0,4,0">
+                            <TextBlock Text="⟳" />
+                        </Button>
+                        <TextBlock Classes="arc-secondary"
+                                   VerticalAlignment="Center"
+                                   Text="Icon button for small toolbar actions." />
+                    </StackPanel>
+                </StackPanel>
+
+                <Separator Classes="arc-separator" />
+
+                <!-- Form Elements -->
+                <Border Classes="arc-card">
+                    <StackPanel>
+                        <TextBlock Classes="arc-primary"
+                                   Text="Task Parameters"
+                                   Margin="0,0,0,4" />
+
+                        <TextBlock Classes="arc-secondary"
+                                   Text="Asset"
+                                   Margin="0,0,0,2" />
+                        <ComboBox Classes="arc-combobox"
+                                  SelectedIndex="0" HorizontalAlignment="Stretch">
+                            <ComboBoxItem Content="UGV-01 • Ground" />
+                            <ComboBoxItem Content="UAV-12 • Air" />
+                            <ComboBoxItem Content="USV-03 • Surface" />
+                        </ComboBox>
+
+                        <TextBlock Classes="arc-secondary"
+                                   Text="Objective"
+                                   Margin="0,8,0,2" />
+                        <TextBox Classes="arc-input"
+                                 Text="Investigate contact 80481" />
+
+                        <StackPanel Orientation="Horizontal"
+                                    Margin="0,8,0,0">
+                            <ToggleButton Classes="arc-toggle-switch"
+                                          Margin="0,0,8,0" />
+                            <TextBlock Classes="arc-secondary"
+                                       VerticalAlignment="Center"
+                                       TextWrapping="Wrap"
+                                       Text="Replace current task on conflict" />
+                        </StackPanel>
+                    </StackPanel>
+                </Border>
+
+                <Separator Classes="arc-separator" />
+
+                <Border Classes="arc-panelheader">
+                    <TextBlock Classes="arc-sectionheader"
+                               Text="List / Tasks Preview" />
+                </Border>
+
+                <!-- List Test -->
+                <ListBox Classes="arc-listbox"
+                         Height="220">
+
+                    <ListBoxItem Classes="arc-listboxitem">
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="Auto" />
+                            </Grid.ColumnDefinitions>
+
+                            <TextBlock Grid.Column="0"
+                                       Text="Task 01 – Battery Low"
+                                       Classes="arc-secondary"
+                                       VerticalAlignment="Center" />
+
+                            <Border Grid.Column="1"
+                                    Classes="arc-badge-warning"
+                                    Margin="8,0,0,0"
+                                    HorizontalAlignment="Right">
+                                <TextBlock Classes="arc-secondary"
+                                           Text="Warning"
+                                           Margin="4,0,4,0" />
+                            </Border>
+                        </Grid>
+                    </ListBoxItem>
+
+                    <ListBoxItem Classes="arc-listboxitem">
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="Auto" />
+                            </Grid.ColumnDefinitions>
+
+                            <TextBlock Grid.Column="0"
+                                       Text="Task 02 – Waypoint reached"
+                                       Classes="arc-secondary"
+                                       VerticalAlignment="Center" />
+
+                            <Border Grid.Column="1"
+                                    Classes="arc-badge-online"
+                                    Margin="8,0,0,0"
+                                    HorizontalAlignment="Right">
+                                <TextBlock Classes="arc-secondary"
+                                           Text="Nominal"
+                                           Margin="4,0,4,0" />
+                            </Border>
+                        </Grid>
+                    </ListBoxItem>
+
+                    <ListBoxItem Classes="arc-listboxitem">
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="Auto" />
+                            </Grid.ColumnDefinitions>
+
+                            <TextBlock Grid.Column="0"
+                                       Text="Task 03 – Navigation update"
+                                       Classes="arc-secondary"
+                                       VerticalAlignment="Center" />
+
+                            <Border Grid.Column="1"
+                                    Classes="arc-badge-online"
+                                    Margin="8,0,0,0"
+                                    HorizontalAlignment="Right">
+                                <TextBlock Classes="arc-secondary"
+                                           Text="Executing"
+                                           Margin="4,0,4,0" />
+                            </Border>
+                        </Grid>
+                    </ListBoxItem>
+
+                    <ListBoxItem Classes="arc-listboxitem">
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="Auto" />
+                            </Grid.ColumnDefinitions>
+
+                            <TextBlock Grid.Column="0"
+                                       Text="Task 04 – Diagnostics"
+                                       Classes="arc-secondary"
+                                       VerticalAlignment="Center" />
+
+                            <Border Grid.Column="1"
+                                    Classes="arc-badge-error"
+                                    Margin="8,0,0,0"
+                                    HorizontalAlignment="Right">
+                                <TextBlock Classes="arc-secondary"
+                                           Text="Error"
+                                           Margin="4,0,4,0" />
+                            </Border>
+                        </Grid>
+                    </ListBoxItem>
+                </ListBox>
+
+                <Border Classes="arc-card">
+                    <StackPanel>
+                        <TextBlock Classes="arc-primary"
+                                   Text="ComboBox Test"
+                                   Margin="0,0,0,4" />
+
+                        <ComboBox Classes="arc-combobox"
+                                  SelectedIndex="0"
+                                  Margin="0,0,0,4">
+                            <ComboBoxItem Content="Option A • Default" />
+                            <ComboBoxItem Content="Option B • Alternate" />
+                            <ComboBoxItem Content="Option C • Fallback" />
+                        </ComboBox>
+
+                        <TextBlock Classes="arc-secondary"
+                                   Text="Standalone ComboBox using Arc.ComboBox."
+                                   TextWrapping="Wrap" />
+                    </StackPanel>
+                </Border>
+            </StackPanel>
+        </Border>
+
+    </Grid>
+</Window>

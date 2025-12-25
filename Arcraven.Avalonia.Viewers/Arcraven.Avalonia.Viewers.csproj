@@ -1,0 +1,32 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net9.0</TargetFramework>
+
+        <OutputType>Library</OutputType>
+        <Nullable>enable</Nullable>
+        <ImplicitUsings>enable</ImplicitUsings>
+
+        <AvaloniaUseCompiledBindingsByDefault>true</AvaloniaUseCompiledBindingsByDefault>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <Folder Include="Helpers\" />
+      <Folder Include="Services\" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\arcraven.avalonia.resourcelib\Arcraven.Avalonia.ResourcesLib.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <PackageReference Include="LibVLCSharp" Version="3.9.5" />
+      <PackageReference Include="LibVLCSharp.Avalonia" Version="3.9.5" />
+      <PackageReference Include="SIPSorcery" Version="8.0.23" />
+      <PackageReference Include="SIPSorceryMedia.Abstractions" Version="8.0.12" />
+      <PackageReference Include="System.Net.WebSockets.Client" Version="4.3.2" />
+      <PackageReference Include="VideoLAN.LibVLC.Windows" Version="3.0.21" />
+      <PackageReference Include="WebviewGtk" Version="0.2.0" />
+    </ItemGroup>
+
+</Project>

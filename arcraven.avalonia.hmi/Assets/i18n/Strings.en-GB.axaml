@@ -1,0 +1,67 @@
+<ResourceDictionary xmlns="https://github.com/avaloniaui"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <x:String x:Key="Text.IndustrialInterface">INDUSTRIAL INTERFACE</x:String>
+    <x:String x:Key="Text.BuildVersion">BUILD VERSION</x:String>
+    <x:String x:Key="Text.StationId">STATION ID</x:String>
+    <x:String x:Key="Text.AuthHeader">System Authentication</x:String>
+    <x:String x:Key="Text.AuthSubHeader">Authorized Personnel Only</x:String>
+    <x:String x:Key="Text.SignIn">SIGN IN</x:String>
+    <x:String x:Key="Text.EncryptionNotice">SECURE SSO TUNNEL ACTIVE (AES-256)</x:String>
+    
+    <x:String x:Key="Text.Coordinates">COORDINATES</x:String>
+    <x:String x:Key="Text.Location">LOCATION</x:String>
+    <x:String x:Key="Text.Value">VALUE</x:String>
+    <x:String x:Key="Text.Duration">DURATION</x:String>
+    <x:String x:Key="Text.LinkStatus">LINK STATUS</x:String>
+    <x:String x:Key="Text.Connected">CONNECTED</x:String>
+    <x:String x:Key="Text.TakeControl">TAKE CONTROL</x:String>
+    <x:String x:Key="Text.ManualOverrideActive">MANUAL OVERRIDE ACTIVE</x:String>
+    <x:String x:Key="Text.Acknowledge">ACKNOWLEDGE</x:String>
+    
+    <x:String x:Key="Text.EnvironmentLabel">ENVIRONMENT</x:String>
+    <x:String x:Key="Text.ProdCore">PRODUCTION CORE</x:String>
+    <x:String x:Key="Text.UtcLabel">UTC TIMESTAMP</x:String>
+
+    <x:String x:Key="Text.LicenseNotice">PROPRIETARY INFORMATION NOTICE</x:String>
+    <x:String x:Key="Text.LicenseTitle">Arcraven Universal Proprietary License (AUPL) v1.0</x:String>
+    <x:String x:Key="Text.Copyright">Copyright © 2025 Arcraven Inc. All rights reserved.</x:String>
+    
+    <x:String x:Key="Text.OwnershipTitle">OWNERSHIP</x:String>
+    <x:String x:Key="Text.OwnershipContent">All software, binaries, designs, and algorithms are the exclusive property of Arcraven Inc. Access to this system does not constitute a transfer of intellectual property.</x:String>
+    
+    <x:String x:Key="Text.RestrictionsTitle">RESTRICTIONS</x:String>
+    <x:String x:Key="Text.RestrictionsContent">Modifying, reverse-engineering, or exporting Arcraven Products to external parties is strictly prohibited. Unauthorized use for competing product development will result in immediate termination of access and legal action.</x:String>
+    
+    <x:String x:Key="Text.AuditTitle">AUDIT &amp; MONITORING</x:String>
+    <x:String x:Key="Text.AuditContent">All system operations are monitored and logged. By authenticating, you consent to continuous security auditing of all actions performed within this interface.</x:String>
+
+    <x:String x:Key="Text.SelectState">Select State</x:String>
+    <x:String x:Key="Text.Dismiss">Dismiss</x:String>
+    <x:String x:Key="Text.LogTicket">Log Ticket</x:String>
+    <x:String x:Key="Text.RetryConnection">Retry Connection</x:String>
+    <x:String x:Key="Text.VideoFeedLost">VIDEO FEED LOST</x:String>
+    <x:String x:Key="Text.MapFeedNA">MAP FEED N/A</x:String>
+    <x:String x:Key="Text.Meters">meters</x:String>
+    <x:String x:Key="Text.Load">Load</x:String>
+    
+    <x:String x:Key="Text.LatLong">LATITUDE / LONGITUDE</x:String>
+    <x:String x:Key="Text.Altitude">ALTITUDE</x:String>
+    <x:String x:Key="Text.Description">DESCRIPTION</x:String>
+    <x:String x:Key="Text.UnitStatus">UNIT STATUS</x:String>
+    <x:String x:Key="Text.UnitStatusValue">Online / Standby</x:String>
+    <x:String x:Key="Text.ControlMode">CONTROL MODE</x:String>
+    <x:String x:Key="Text.ProcessMetrics">PROCESS METRICS</x:String>
+    
+    <x:String x:Key="Text.Tracks">Tracks</x:String>
+    <x:String x:Key="Text.Assets">Assets</x:String>
+    <x:String x:Key="Text.Shapes">Shapes</x:String>
+    <x:String x:Key="Text.SearchTracks">Search tracks</x:String>
+    <x:String x:Key="Text.NeedsReview">Needs Review</x:String>
+    
+    <x:String x:Key="Text.TacticalMap">TACTICAL MAP</x:String>
+    <x:String x:Key="Text.TimelineVisualization">TIMELINE VISUALIZATION</x:String>
+    <x:String x:Key="Text.Selected">Selected: </x:String>
+    <x:String x:Key="Text.None">None</x:String>
+    <x:String x:Key="Text.ToggleSidebar">Toggle Sidebar</x:String>
+    <x:String x:Key="Text.ToggleTimeline">Toggle Timeline</x:String>
+</ResourceDictionary>

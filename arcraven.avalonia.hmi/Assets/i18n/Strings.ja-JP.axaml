@@ -1,0 +1,67 @@
+<ResourceDictionary xmlns="https://github.com/avaloniaui"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <x:String x:Key="Text.IndustrialInterface">産業用インターフェース</x:String>
+    <x:String x:Key="Text.BuildVersion">ビルドバージョン</x:String>
+    <x:String x:Key="Text.StationId">ステーションID</x:String>
+    <x:String x:Key="Text.AuthHeader">システム認証</x:String>
+    <x:String x:Key="Text.AuthSubHeader">関係者以外立入禁止</x:String>
+    <x:String x:Key="Text.SignIn">サインイン</x:String>
+    <x:String x:Key="Text.EncryptionNotice">セキュアSSOトンネル有効 (AES-256)</x:String>
+    
+    <x:String x:Key="Text.Coordinates">座標</x:String>
+    <x:String x:Key="Text.Location">場所</x:String>
+    <x:String x:Key="Text.Value">値</x:String>
+    <x:String x:Key="Text.Duration">期間</x:String>
+    <x:String x:Key="Text.LinkStatus">リンク状態</x:String>
+    <x:String x:Key="Text.Connected">接続済み</x:String>
+    <x:String x:Key="Text.TakeControl">制御権取得</x:String>
+    <x:String x:Key="Text.ManualOverrideActive">手動オーバーライド中</x:String>
+    <x:String x:Key="Text.Acknowledge">確認</x:String>
+    
+    <x:String x:Key="Text.EnvironmentLabel">環境</x:String>
+    <x:String x:Key="Text.ProdCore">プロダクションコア</x:String>
+    <x:String x:Key="Text.UtcLabel">UTCタイムスタンプ</x:String>
+
+    <x:String x:Key="Text.LicenseNotice">独自の権利に関する通知</x:String>
+    <x:String x:Key="Text.LicenseTitle">Arcravenユニバーサル独自ライセンス (AUPL) v1.0</x:String>
+    <x:String x:Key="Text.Copyright">Copyright © 2025 Arcraven Inc. All rights reserved.</x:String>
+    
+    <x:String x:Key="Text.OwnershipTitle">所有権</x:String>
+    <x:String x:Key="Text.OwnershipContent">すべてのソフトウェア、バイナリ、設計、およびアルゴリズムは、Arcraven Inc.の独占的財産です。本システムへのアクセスは、知的財産の譲渡を構成するものではありません。</x:String>
+    
+    <x:String x:Key="Text.RestrictionsTitle">制限事項</x:String>
+    <x:String x:Key="Text.RestrictionsContent">Arcraven製品の変更、リバースエンジニアリング、または外部への輸出は固く禁じられています。競合製品の開発を目的とした不正使用は、アクセスの即時停止および法的措置の対象となります。</x:String>
+    
+    <x:String x:Key="Text.AuditTitle">監査と監視</x:String>
+    <x:String x:Key="Text.AuditContent">すべてのシステム操作は監視および記録されます。認証を行うことにより、このインターフェース内で実行されるすべてのアクションに対する継続的なセキュリティ監査に同意したことになります。</x:String>
+
+    <x:String x:Key="Text.SelectState">状態を選択</x:String>
+    <x:String x:Key="Text.Dismiss">閉じる</x:String>
+    <x:String x:Key="Text.LogTicket">チケット起票</x:String>
+    <x:String x:Key="Text.RetryConnection">再接続</x:String>
+    <x:String x:Key="Text.VideoFeedLost">ビデオフィード消失</x:String>
+    <x:String x:Key="Text.MapFeedNA">マップフィードなし</x:String>
+    <x:String x:Key="Text.Meters">メートル</x:String>
+    <x:String x:Key="Text.Load">負荷</x:String>
+    
+    <x:String x:Key="Text.LatLong">緯度 / 経度</x:String>
+    <x:String x:Key="Text.Altitude">高度</x:String>
+    <x:String x:Key="Text.Description">説明</x:String>
+    <x:String x:Key="Text.UnitStatus">ユニット状態</x:String>
+    <x:String x:Key="Text.UnitStatusValue">オンライン / 待機中</x:String>
+    <x:String x:Key="Text.ControlMode">制御モード</x:String>
+    <x:String x:Key="Text.ProcessMetrics">プロセスメトリクス</x:String>
+    
+    <x:String x:Key="Text.Tracks">トラック</x:String>
+    <x:String x:Key="Text.Assets">アセット</x:String>
+    <x:String x:Key="Text.Shapes">シェイプ</x:String>
+    <x:String x:Key="Text.SearchTracks">トラックを検索</x:String>
+    <x:String x:Key="Text.NeedsReview">要確認</x:String>
+    
+    <x:String x:Key="Text.TacticalMap">戦術マップ</x:String>
+    <x:String x:Key="Text.TimelineVisualization">タイムライン可視化</x:String>
+    <x:String x:Key="Text.Selected">選択中: </x:String>
+    <x:String x:Key="Text.None">なし</x:String>
+    <x:String x:Key="Text.ToggleSidebar">サイドバー切替</x:String>
+    <x:String x:Key="Text.ToggleTimeline">タイムライン切替</x:String>
+</ResourceDictionary>

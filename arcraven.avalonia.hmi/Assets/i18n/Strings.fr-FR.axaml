@@ -1,0 +1,67 @@
+<ResourceDictionary xmlns="https://github.com/avaloniaui"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <x:String x:Key="Text.IndustrialInterface">INTERFACE INDUSTRIELLE</x:String>
+    <x:String x:Key="Text.BuildVersion">VERSION DE COMPILATION</x:String>
+    <x:String x:Key="Text.StationId">ID STATION</x:String>
+    <x:String x:Key="Text.AuthHeader">Authentification Système</x:String>
+    <x:String x:Key="Text.AuthSubHeader">Personnel Autorisé Uniquement</x:String>
+    <x:String x:Key="Text.SignIn">SE CONNECTER</x:String>
+    <x:String x:Key="Text.EncryptionNotice">TUNNEL SSO SÉCURISÉ ACTIF (AES-256)</x:String>
+    
+    <x:String x:Key="Text.Coordinates">COORDONNÉES</x:String>
+    <x:String x:Key="Text.Location">EMPLACEMENT</x:String>
+    <x:String x:Key="Text.Value">VALEUR</x:String>
+    <x:String x:Key="Text.Duration">DURÉE</x:String>
+    <x:String x:Key="Text.LinkStatus">ÉTAT DE LA LIAISON</x:String>
+    <x:String x:Key="Text.Connected">CONNECTÉ</x:String>
+    <x:String x:Key="Text.TakeControl">PRENDRE LE CONTRÔLE</x:String>
+    <x:String x:Key="Text.ManualOverrideActive">CONTRÔLE MANUEL ACTIF</x:String>
+    <x:String x:Key="Text.Acknowledge">ACQUITTER</x:String>
+    
+    <x:String x:Key="Text.EnvironmentLabel">ENVIRONNEMENT</x:String>
+    <x:String x:Key="Text.ProdCore">CŒUR DE PRODUCTION</x:String>
+    <x:String x:Key="Text.UtcLabel">HORODATAGE UTC</x:String>
+
+    <x:String x:Key="Text.LicenseNotice">AVIS D'INFORMATION PROPRIÉTAIRE</x:String>
+    <x:String x:Key="Text.LicenseTitle">Licence Propriétaire Universelle Arcraven (AUPL) v1.0</x:String>
+    <x:String x:Key="Text.Copyright">Copyright © 2025 Arcraven Inc. Tous droits réservés.</x:String>
+    
+    <x:String x:Key="Text.OwnershipTitle">PROPRIÉTÉ</x:String>
+    <x:String x:Key="Text.OwnershipContent">Tous les logiciels, binaires, conceptions et algorithmes sont la propriété exclusive d'Arcraven Inc. L'accès à ce système ne constitue pas un transfert de propriété intellectuelle.</x:String>
+    
+    <x:String x:Key="Text.RestrictionsTitle">RESTRICTIONS</x:String>
+    <x:String x:Key="Text.RestrictionsContent">La modification, la rétro-ingénierie ou l'exportation des produits Arcraven vers des tiers est strictement interdite. L'utilisation non autorisée pour le développement de produits concurrents entraînera la résiliation immédiate de l'accès et des poursuites judiciaires.</x:String>
+    
+    <x:String x:Key="Text.AuditTitle">AUDIT ET SURVEILLANCE</x:String>
+    <x:String x:Key="Text.AuditContent">Toutes les opérations du système sont surveillées et enregistrées. En vous authentifiant, vous consentez à un audit de sécurité continu de toutes les actions effectuées dans cette interface.</x:String>
+
+    <x:String x:Key="Text.SelectState">Sélectionner l'état</x:String>
+    <x:String x:Key="Text.Dismiss">Ignorer</x:String>
+    <x:String x:Key="Text.LogTicket">Créer un ticket</x:String>
+    <x:String x:Key="Text.RetryConnection">Réessayer la connexion</x:String>
+    <x:String x:Key="Text.VideoFeedLost">FLUX VIDÉO PERDU</x:String>
+    <x:String x:Key="Text.MapFeedNA">FLUX CARTE N/D</x:String>
+    <x:String x:Key="Text.Meters">mètres</x:String>
+    <x:String x:Key="Text.Load">Charge</x:String>
+    
+    <x:String x:Key="Text.LatLong">LATITUDE / LONGITUDE</x:String>
+    <x:String x:Key="Text.Altitude">ALTITUDE</x:String>
+    <x:String x:Key="Text.Description">DESCRIPTION</x:String>
+    <x:String x:Key="Text.UnitStatus">ÉTAT DE L'UNITÉ</x:String>
+    <x:String x:Key="Text.UnitStatusValue">En ligne / En veille</x:String>
+    <x:String x:Key="Text.ControlMode">MODE DE CONTRÔLE</x:String>
+    <x:String x:Key="Text.ProcessMetrics">MÉTRIQUES DE PROCESSUS</x:String>
+    
+    <x:String x:Key="Text.Tracks">Pistes</x:String>
+    <x:String x:Key="Text.Assets">Actifs</x:String>
+    <x:String x:Key="Text.Shapes">Formes</x:String>
+    <x:String x:Key="Text.SearchTracks">Rechercher des pistes</x:String>
+    <x:String x:Key="Text.NeedsReview">À revoir</x:String>
+    
+    <x:String x:Key="Text.TacticalMap">CARTE TACTIQUE</x:String>
+    <x:String x:Key="Text.TimelineVisualization">VISUALISATION TEMPORELLE</x:String>
+    <x:String x:Key="Text.Selected">Sélection : </x:String>
+    <x:String x:Key="Text.None">Aucun</x:String>
+    <x:String x:Key="Text.ToggleSidebar">Basculer la barre latérale</x:String>
+    <x:String x:Key="Text.ToggleTimeline">Basculer la chronologie</x:String>
+</ResourceDictionary>

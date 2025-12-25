@@ -1,0 +1,122 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:vm="using:Arcraven.Avalonia.HMI.ViewModels"
+        xmlns:resourcesLib="clr-namespace:Arcraven.Avalonia.ResourcesLib;assembly=Arcraven.Avalonia.ResourcesLib"
+        xmlns:models="clr-namespace:Arcraven.Avalonia.ResourcesLib.Models;assembly=Arcraven.Avalonia.ResourcesLib"
+        x:Class="Arcraven.Avalonia.HMI.Views.MainWindow"
+        x:DataType="vm:ShellViewModel"
+        Title="Arcraven - TwinPeek"
+        Icon="/Assets/arcraven.ico"
+        Classes="arc-shellwindow"> <Grid RowDefinitions="*, 28">
+        <Grid ColumnDefinitions="54, *">
+            
+            <Border Grid.Column="0" 
+                    Background="{StaticResource Arc.BaseBackgroundColor}" 
+                    BorderBrush="{StaticResource Arc.PanelBorderBrush}" 
+                    BorderThickness="0,0,1,0">
+                <DockPanel>
+                    <Border DockPanel.Dock="Top" 
+                            Height="54" 
+                            BorderBrush="{StaticResource Arc.PanelBorderBrush}" 
+                            BorderThickness="0,0,0,1">
+                        <Svg Path="/Assets/Icons/arcraven_logo.svg" Width="24" Height="24"/>
+                    </Border>
+
+                    <ListBox x:Name="NavList"
+                             ItemsSource="{Binding Pages}"
+                             SelectedItem="{Binding SelectedPage}"
+                             Background="Transparent"
+                             BorderThickness="0">
+                        <ListBox.Styles>
+                            <Style Selector="ListBoxItem">
+                                <Setter Property="Padding" Value="0" />
+                                <Setter Property="Height" Value="54" />
+                                <Setter Property="Width" Value="54" />
+                                <Setter Property="Background" Value="Transparent" />
+                            </Style>
+                            
+                            <Style Selector="ListBoxItem:selected /template/ ContentPresenter">
+                                <Setter Property="Background" Value="{StaticResource Arc.SelectionBrush}" />
+                            </Style>
+                            
+                            <Style Selector="ListBoxItem:selected Rectangle#ActiveMarker">
+                                <Setter Property="IsVisible" Value="True" />
+                            </Style>
+                        </ListBox.Styles>
+                        
+                        <ListBox.ItemTemplate>
+                            <DataTemplate x:DataType="models:PageDefinition">
+                                <Panel ToolTip.Tip="{Binding Title}">
+                                    <Rectangle x:Name="ActiveMarker" 
+                                               IsVisible="False"
+                                               Width="3" HorizontalAlignment="Left"
+                                               Fill="{StaticResource Arc.AccentPrimaryBrush}" />
+                                    <Svg Path="{Binding IconUri}" Width="20" Height="20" 
+                                         HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                </Panel>
+                            </DataTemplate>
+                        </ListBox.ItemTemplate>
+                    </ListBox>
+                </DockPanel>
+            </Border>
+
+            <ContentControl Grid.Column="1" Content="{Binding CurrentPage}" />
+        </Grid>
+
+        <Border Grid.Row="1" 
+                Background="{StaticResource Arc.PanelHeaderBrush}" 
+                BorderBrush="{StaticResource Arc.PanelBorderBrush}" 
+                BorderThickness="0,1,0,0"
+                Padding="12,0">
+            <Grid ColumnDefinitions="Auto, *, Auto">
+                
+                <StackPanel Grid.Column="0" Orientation="Horizontal" Spacing="15">
+                    <StackPanel Orientation="Horizontal" Spacing="6">
+                        <Ellipse Width="8" Height="8" 
+                                 Fill="{StaticResource Arc.StatusSimulatedBrush}" 
+                                 VerticalAlignment="Center"/>
+                        <TextBlock Text="SYSTEM READY" 
+                                   Classes="arc-label"
+                                   VerticalAlignment="Center" 
+                                   Foreground="{StaticResource Arc.StatusSimulatedBrush}"/>
+                    </StackPanel>
+                    
+                    <Separator Width="1" Height="14" 
+                               Background="{StaticResource Arc.SeparatorBrush}" 
+                               VerticalAlignment="Center"/>
+                               
+                    <TextBlock Text="COMMS: NOMINAL" 
+                               Classes="arc-secondary"
+                               FontSize="10" 
+                               VerticalAlignment="Center"/>
+                </StackPanel>
+
+                <StackPanel Grid.Column="2" Orientation="Horizontal" Spacing="20">
+                    <TextBlock Text="{Binding AppVersion, StringFormat='VER {0}'}" 
+                               Classes="arc-secondary"
+                               FontSize="10" 
+                               Opacity="0.5" 
+                               VerticalAlignment="Center"/>
+                    
+                    <Rectangle Width="1" Height="14" 
+                               Fill="{StaticResource Arc.SeparatorBrush}" 
+                               VerticalAlignment="Center"/>
+                               
+                    <StackPanel Orientation="Horizontal" Spacing="8">
+                        <TextBlock Text="UTC" 
+                                   Classes="arc-secondary"
+                                   FontSize="10" 
+                                   Opacity="0.5" 
+                                   VerticalAlignment="Center"/>
+                        <TextBlock Text="{Binding UtcTimestamp}" 
+                                   FontSize="11" 
+                                   FontFamily="Consolas" 
+                                   VerticalAlignment="Center" 
+                                   Foreground="{StaticResource Arc.AccentPrimaryBrush}"
+                                   FontWeight="SemiBold"/>
+                    </StackPanel>
+                </StackPanel>
+            </Grid>
+        </Border>
+    </Grid>
+</Window>

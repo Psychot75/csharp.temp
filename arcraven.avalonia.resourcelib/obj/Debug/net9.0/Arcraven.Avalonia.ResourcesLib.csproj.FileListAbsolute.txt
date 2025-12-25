@@ -1,0 +1,15 @@
+C:\Users\EH02\Documents\Arcraven.TwinPeek\arcraven.avalonia.resourcelib\bin\Debug\net9.0\Arcraven.Avalonia.ResourcesLib.deps.json
+C:\Users\EH02\Documents\Arcraven.TwinPeek\arcraven.avalonia.resourcelib\bin\Debug\net9.0\Arcraven.Avalonia.ResourcesLib.dll
+C:\Users\EH02\Documents\Arcraven.TwinPeek\arcraven.avalonia.resourcelib\bin\Debug\net9.0\Arcraven.Avalonia.ResourcesLib.pdb
+C:\Users\EH02\Documents\Arcraven.TwinPeek\arcraven.avalonia.resourcelib\obj\Debug\net9.0\Arcraven.Avalonia.ResourcesLib.csproj.AssemblyReference.cache
+C:\Users\EH02\Documents\Arcraven.TwinPeek\arcraven.avalonia.resourcelib\obj\Debug\net9.0\Avalonia\Resources.Inputs.cache
+C:\Users\EH02\Documents\Arcraven.TwinPeek\arcraven.avalonia.resourcelib\obj\Debug\net9.0\Avalonia\resources
+C:\Users\EH02\Documents\Arcraven.TwinPeek\arcraven.avalonia.resourcelib\obj\Debug\net9.0\Arcraven.Avalonia.ResourcesLib.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\EH02\Documents\Arcraven.TwinPeek\arcraven.avalonia.resourcelib\obj\Debug\net9.0\Arcraven.Avalonia.ResourcesLib.AssemblyInfoInputs.cache
+C:\Users\EH02\Documents\Arcraven.TwinPeek\arcraven.avalonia.resourcelib\obj\Debug\net9.0\Arcraven.Avalonia.ResourcesLib.AssemblyInfo.cs
+C:\Users\EH02\Documents\Arcraven.TwinPeek\arcraven.avalonia.resourcelib\obj\Debug\net9.0\Arcraven.Avalonia.ResourcesLib.csproj.CoreCompileInputs.cache
+C:\Users\EH02\Documents\Arcraven.TwinPeek\arcraven.avalonia.resourcelib\obj\Debug\net9.0\Arcraven.Avalonia.ResourcesLib.sourcelink.json
+C:\Users\EH02\Documents\Arcraven.TwinPeek\arcraven.avalonia.resourcelib\obj\Debug\net9.0\Arcraven.Avalonia.ResourcesLib.dll
+C:\Users\EH02\Documents\Arcraven.TwinPeek\arcraven.avalonia.resourcelib\obj\Debug\net9.0\refint\Arcraven.Avalonia.ResourcesLib.dll
+C:\Users\EH02\Documents\Arcraven.TwinPeek\arcraven.avalonia.resourcelib\obj\Debug\net9.0\Arcraven.Avalonia.ResourcesLib.pdb
+C:\Users\EH02\Documents\Arcraven.TwinPeek\arcraven.avalonia.resourcelib\obj\Debug\net9.0\ref\Arcraven.Avalonia.ResourcesLib.dll

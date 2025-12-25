@@ -1,0 +1,41 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net9.0</TargetFramework>
+
+        <OutputType>Library</OutputType>
+        <Nullable>enable</Nullable>
+        <ImplicitUsings>enable</ImplicitUsings>
+
+        <AvaloniaUseCompiledBindingsByDefault>true</AvaloniaUseCompiledBindingsByDefault>
+    </PropertyGroup>
+    <ItemGroup>
+        <PackageReference Include="Google.Protobuf" Version="3.29.0" />
+        <PackageReference Include="Grpc.Net.Client" Version="2.67.0" />
+        <PackageReference Include="Grpc.Tools" Version="2.68.1">
+            <PrivateAssets>all</PrivateAssets>
+            <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+        </PackageReference>
+        <PackageReference Include="Grpc.AspNetCore" Version="2.67.0" />
+    </ItemGroup>
+    <ItemGroup>
+        <PackageReference Include="Avalonia" Version="11.3.9" />
+        <PackageReference Include="Dapper" Version="2.1.66" />
+        <PackageReference Include="Duende.IdentityModel.OidcClient" Version="7.0.0" />
+        <PackageReference Include="Duende.IdentityModel.OidcClient.Extensions" Version="7.0.0" />
+        <PackageReference Include="Npgsql" Version="10.0.1" />
+        <PackageReference Include="System.IO.FileSystem.AccessControl" Version="5.0.0" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Folder Include="Controls\" />
+      <Folder Include="Protos\" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Compile Update="Views\AvaloniaThemeTestWindow.axaml.cs">
+        <DependentUpon>AvaloniaThemeTestWindow.axaml</DependentUpon>
+        <SubType>Code</SubType>
+      </Compile>
+    </ItemGroup>
+</Project>

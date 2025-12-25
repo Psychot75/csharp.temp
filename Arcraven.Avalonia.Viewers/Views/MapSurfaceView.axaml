@@ -1,0 +1,22 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:vm="clr-namespace:Arcraven.Avalonia.Viewers.ViewModels"
+             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+             x:DataType="vm:MapSurfaceViewModel"
+             x:Class="Arcraven.Avalonia.Viewers.Views.MapSurfaceView">
+    <Grid Classes="arc-mapsurface">
+        <TextBlock Text="{DynamicResource Text.TacticalMap}" 
+                   Classes="arc-sectionheader" 
+                   HorizontalAlignment="Center" 
+                   VerticalAlignment="Center" 
+                   Opacity="0.2" FontSize="40" />
+        
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="16">
+            <Button Command="{Binding ToggleLayerCommand}" Classes="arc-iconbutton" ToolTip.Tip="Toggle Layers">
+                <TextBlock Text="◫" />
+            </Button>
+        </StackPanel>
+    </Grid>
+</UserControl>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AvaloniaProject">
+    <option name="projectPerEditor">
+      <map>
+        <entry key="Arcraven.Avalonia.Viewers/Views/EventListView.axaml" value="arcraven.avalonia.hmi/Arcraven.Avalonia.HMI.csproj" />
+        <entry key="Arcraven.Avalonia.Viewers/Views/MapSurfaceView.axaml" value="arcraven.avalonia.hmi/Arcraven.Avalonia.HMI.csproj" />
+        <entry key="Arcraven.Avalonia.Viewers/Views/TimelineComponent.axaml" value="arcraven.avalonia.hmi/Arcraven.Avalonia.HMI.csproj" />
+        <entry key="Arcraven.Avalonia.Viewers/Views/VideoFeedView.axaml" value="arcraven.avalonia.hmi/Arcraven.Avalonia.HMI.csproj" />
+        <entry key="Arcraven.Avalonia.Viewers/Views/WebRTCVideoView.axaml" value="arcraven.avalonia.hmi/Arcraven.Avalonia.HMI.csproj" />
+        <entry key="arcraven.avalonia.hmi/App.axaml" value="arcraven.avalonia.hmi/Arcraven.Avalonia.HMI.csproj" />
+        <entry key="arcraven.avalonia.hmi/Assets/i18n/Strings.en-GB.axaml" value="arcraven.avalonia.hmi/Arcraven.Avalonia.HMI.csproj" />
+        <entry key="arcraven.avalonia.hmi/Assets/i18n/Strings.fr-FR.axaml" value="arcraven.avalonia.hmi/Arcraven.Avalonia.HMI.csproj" />
+        <entry key="arcraven.avalonia.hmi/Assets/i18n/Strings.ja-JP.axaml" value="arcraven.avalonia.hmi/Arcraven.Avalonia.HMI.csproj" />
+        <entry key="arcraven.avalonia.hmi/Assets/i18n/Strings.zh-CN.axaml" value="arcraven.avalonia.hmi/Arcraven.Avalonia.HMI.csproj" />
+        <entry key="arcraven.avalonia.hmi/Views/GeneralView.axaml" value="arcraven.avalonia.hmi/Arcraven.Avalonia.HMI.csproj" />
+        <entry key="arcraven.avalonia.hmi/Views/LoginWindow.axaml" value="arcraven.avalonia.hmi/Arcraven.Avalonia.HMI.csproj" />
+        <entry key="arcraven.avalonia.hmi/Views/MainWindow.axaml" value="arcraven.avalonia.hmi/Arcraven.Avalonia.HMI.csproj" />
+        <entry key="arcraven.avalonia.hmi/Views/TestView.axaml" value="arcraven.avalonia.hmi/Arcraven.Avalonia.HMI.csproj" />
+        <entry key="arcraven.avalonia.resourcelib/Themes/ArcravenAvaloniaTheme.axaml" value="arcraven.avalonia.hmi/Arcraven.Avalonia.HMI.csproj" />
+        <entry key="arcraven.avalonia.resourcelib/Views/AvaloniaThemeTestWindow.axaml" value="arcraven.avalonia.hmi/Arcraven.Avalonia.HMI.csproj" />
+      </map>
+    </option>
+  </component>
+</project>

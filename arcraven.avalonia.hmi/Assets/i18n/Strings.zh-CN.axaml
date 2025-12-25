@@ -1,0 +1,67 @@
+<ResourceDictionary xmlns="https://github.com/avaloniaui"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <x:String x:Key="Text.IndustrialInterface">工业界面</x:String>
+    <x:String x:Key="Text.BuildVersion">构建版本</x:String>
+    <x:String x:Key="Text.StationId">工作站 ID</x:String>
+    <x:String x:Key="Text.AuthHeader">系统认证</x:String>
+    <x:String x:Key="Text.AuthSubHeader">仅限授权人员</x:String>
+    <x:String x:Key="Text.SignIn">登录</x:String>
+    <x:String x:Key="Text.EncryptionNotice">安全 SSO 通道已激活 (AES-256)</x:String>
+    
+    <x:String x:Key="Text.Coordinates">坐标</x:String>
+    <x:String x:Key="Text.Location">位置</x:String>
+    <x:String x:Key="Text.Value">数值</x:String>
+    <x:String x:Key="Text.Duration">持续时间</x:String>
+    <x:String x:Key="Text.LinkStatus">链路状态</x:String>
+    <x:String x:Key="Text.Connected">已连接</x:String>
+    <x:String x:Key="Text.TakeControl">接管控制</x:String>
+    <x:String x:Key="Text.ManualOverrideActive">手动覆盖已激活</x:String>
+    <x:String x:Key="Text.Acknowledge">确认</x:String>
+    
+    <x:String x:Key="Text.EnvironmentLabel">环境</x:String>
+    <x:String x:Key="Text.ProdCore">生产核心</x:String>
+    <x:String x:Key="Text.UtcLabel">UTC 时间戳</x:String>
+
+    <x:String x:Key="Text.LicenseNotice">专有信息声明</x:String>
+    <x:String x:Key="Text.LicenseTitle">Arcraven 通用专有许可 (AUPL) v1.0</x:String>
+    <x:String x:Key="Text.Copyright">版权所有 © 2025 Arcraven Inc. 保留所有权利。</x:String>
+    
+    <x:String x:Key="Text.OwnershipTitle">所有权</x:String>
+    <x:String x:Key="Text.OwnershipContent">所有软件、二进制文件、设计和算法均为 Arcraven Inc. 的独家财产。访问本系统并不构成知识产权的转让。</x:String>
+    
+    <x:String x:Key="Text.RestrictionsTitle">限制</x:String>
+    <x:String x:Key="Text.RestrictionsContent">严禁修改、逆向工程或向外部方出口 Arcraven 产品。未经授权用于竞争性产品开发将导致立即终止访问并采取法律行动。</x:String>
+    
+    <x:String x:Key="Text.AuditTitle">审计与监控</x:String>
+    <x:String x:Key="Text.AuditContent">所有系统操作均受监控和记录。通过身份验证，即表示您同意对在此界面内执行的所有操作进行持续的安全审计。</x:String>
+
+    <x:String x:Key="Text.SelectState">选择状态</x:String>
+    <x:String x:Key="Text.Dismiss">忽略</x:String>
+    <x:String x:Key="Text.LogTicket">提交工单</x:String>
+    <x:String x:Key="Text.RetryConnection">重试连接</x:String>
+    <x:String x:Key="Text.VideoFeedLost">视频信号丢失</x:String>
+    <x:String x:Key="Text.MapFeedNA">地图数据不可用</x:String>
+    <x:String x:Key="Text.Meters">米</x:String>
+    <x:String x:Key="Text.Load">负载</x:String>
+    
+    <x:String x:Key="Text.LatLong">纬度 / 经度</x:String>
+    <x:String x:Key="Text.Altitude">高度</x:String>
+    <x:String x:Key="Text.Description">描述</x:String>
+    <x:String x:Key="Text.UnitStatus">单元状态</x:String>
+    <x:String x:Key="Text.UnitStatusValue">在线 / 待机</x:String>
+    <x:String x:Key="Text.ControlMode">控制模式</x:String>
+    <x:String x:Key="Text.ProcessMetrics">过程指标</x:String>
+    
+    <x:String x:Key="Text.Tracks">轨迹</x:String>
+    <x:String x:Key="Text.Assets">资产</x:String>
+    <x:String x:Key="Text.Shapes">形状</x:String>
+    <x:String x:Key="Text.SearchTracks">搜索轨迹</x:String>
+    <x:String x:Key="Text.NeedsReview">待审查</x:String>
+    
+    <x:String x:Key="Text.TacticalMap">战术地图</x:String>
+    <x:String x:Key="Text.TimelineVisualization">时间轴可视化</x:String>
+    <x:String x:Key="Text.Selected">已选择：</x:String>
+    <x:String x:Key="Text.None">无</x:String>
+    <x:String x:Key="Text.ToggleSidebar">切换侧边栏</x:String>
+    <x:String x:Key="Text.ToggleTimeline">切换时间轴</x:String>
+</ResourceDictionary>

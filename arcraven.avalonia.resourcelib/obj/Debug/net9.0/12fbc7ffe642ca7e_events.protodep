@@ -1,0 +1,4 @@
+obj\Debug\net9.0\Protos/Events.cs \
+obj\Debug\net9.0\Protos/EventsGrpc.cs: C:/Users/EH02/.nuget/packages/grpc.tools/2.68.1/build/native/include/google/protobuf/timestamp.proto\
+ C:/Users/EH02/.nuget/packages/grpc.tools/2.68.1/build/native/include/google/protobuf/duration.proto\
+ Protos/events.proto
