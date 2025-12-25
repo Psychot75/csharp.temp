@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\EH02\\Documents\\Arcraven.TwinPeek\\Arcraven.Avalonia.Viewers\\Arcraven.Avalonia.Viewers.csproj": {}
+    "C:\\Users\\EH02\\Documents\\New folder\\Arcraven.Avalonia.Viewers\\Arcraven.Avalonia.Viewers.csproj": {}
   },
   "projects": {
-    "C:\\Users\\EH02\\Documents\\Arcraven.TwinPeek\\arcraven.avalonia.resourcelib\\Arcraven.Avalonia.ResourcesLib.csproj": {
+    "C:\\Users\\EH02\\Documents\\New folder\\arcraven.avalonia.resourcelib\\Arcraven.Avalonia.ResourcesLib.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\EH02\\Documents\\Arcraven.TwinPeek\\arcraven.avalonia.resourcelib\\Arcraven.Avalonia.ResourcesLib.csproj",
+        "projectUniqueName": "C:\\Users\\EH02\\Documents\\New folder\\arcraven.avalonia.resourcelib\\Arcraven.Avalonia.ResourcesLib.csproj",
         "projectName": "Arcraven.Avalonia.ResourcesLib",
-        "projectPath": "C:\\Users\\EH02\\Documents\\Arcraven.TwinPeek\\arcraven.avalonia.resourcelib\\Arcraven.Avalonia.ResourcesLib.csproj",
+        "projectPath": "C:\\Users\\EH02\\Documents\\New folder\\arcraven.avalonia.resourcelib\\Arcraven.Avalonia.ResourcesLib.csproj",
         "packagesPath": "C:\\Users\\EH02\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\EH02\\Documents\\Arcraven.TwinPeek\\arcraven.avalonia.resourcelib\\obj\\",
+        "outputPath": "C:\\Users\\EH02\\Documents\\New folder\\arcraven.avalonia.resourcelib\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -114,14 +114,14 @@
         }
       }
     },
-    "C:\\Users\\EH02\\Documents\\Arcraven.TwinPeek\\Arcraven.Avalonia.Viewers\\Arcraven.Avalonia.Viewers.csproj": {
+    "C:\\Users\\EH02\\Documents\\New folder\\Arcraven.Avalonia.Viewers\\Arcraven.Avalonia.Viewers.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\EH02\\Documents\\Arcraven.TwinPeek\\Arcraven.Avalonia.Viewers\\Arcraven.Avalonia.Viewers.csproj",
+        "projectUniqueName": "C:\\Users\\EH02\\Documents\\New folder\\Arcraven.Avalonia.Viewers\\Arcraven.Avalonia.Viewers.csproj",
         "projectName": "Arcraven.Avalonia.Viewers",
-        "projectPath": "C:\\Users\\EH02\\Documents\\Arcraven.TwinPeek\\Arcraven.Avalonia.Viewers\\Arcraven.Avalonia.Viewers.csproj",
+        "projectPath": "C:\\Users\\EH02\\Documents\\New folder\\Arcraven.Avalonia.Viewers\\Arcraven.Avalonia.Viewers.csproj",
         "packagesPath": "C:\\Users\\EH02\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\EH02\\Documents\\Arcraven.TwinPeek\\Arcraven.Avalonia.Viewers\\obj\\",
+        "outputPath": "C:\\Users\\EH02\\Documents\\New folder\\Arcraven.Avalonia.Viewers\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -143,8 +143,8 @@
           "net9.0": {
             "targetAlias": "net9.0",
             "projectReferences": {
-              "C:\\Users\\EH02\\Documents\\Arcraven.TwinPeek\\arcraven.avalonia.resourcelib\\Arcraven.Avalonia.ResourcesLib.csproj": {
-                "projectPath": "C:\\Users\\EH02\\Documents\\Arcraven.TwinPeek\\arcraven.avalonia.resourcelib\\Arcraven.Avalonia.ResourcesLib.csproj"
+              "C:\\Users\\EH02\\Documents\\New folder\\arcraven.avalonia.resourcelib\\Arcraven.Avalonia.ResourcesLib.csproj": {
+                "projectPath": "C:\\Users\\EH02\\Documents\\New folder\\arcraven.avalonia.resourcelib\\Arcraven.Avalonia.ResourcesLib.csproj"
               }
             }
           }

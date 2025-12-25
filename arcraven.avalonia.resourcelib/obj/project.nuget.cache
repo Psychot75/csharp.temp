@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "2YP8OsUfsIg=",
+  "dgSpecHash": "zKCjgEtHHmg=",
   "success": true,
-  "projectFilePath": "C:\\Users\\EH02\\Documents\\Arcraven.TwinPeek\\arcraven.avalonia.resourcelib\\Arcraven.Avalonia.ResourcesLib.csproj",
+  "projectFilePath": "C:\\Users\\EH02\\Documents\\New folder\\arcraven.avalonia.resourcelib\\Arcraven.Avalonia.ResourcesLib.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\EH02\\.nuget\\packages\\avalonia\\11.3.9\\avalonia.11.3.9.nupkg.sha512",
     "C:\\Users\\EH02\\.nuget\\packages\\avalonia.buildservices\\11.3.2\\avalonia.buildservices.11.3.2.nupkg.sha512",

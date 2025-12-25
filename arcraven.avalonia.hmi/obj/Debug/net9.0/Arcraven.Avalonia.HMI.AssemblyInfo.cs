@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Arcraven.Avalonia.HMI")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+eb67603d6ec52dbdfe9f253edfcc8fce781ac26e")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+1e1ba1a79033558cd8b379e98da530bde903f8ca")]
 [assembly: System.Reflection.AssemblyProductAttribute("Arcraven.Avalonia.HMI")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Arcraven.Avalonia.HMI")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

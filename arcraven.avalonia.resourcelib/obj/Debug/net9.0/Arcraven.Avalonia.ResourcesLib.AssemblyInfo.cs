@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Arcraven.Avalonia.ResourcesLib")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+dddc16947b2ddc272a80c2970cb3ee6e86fbaaef")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+1e1ba1a79033558cd8b379e98da530bde903f8ca")]
 [assembly: System.Reflection.AssemblyProductAttribute("Arcraven.Avalonia.ResourcesLib")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Arcraven.Avalonia.ResourcesLib")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
